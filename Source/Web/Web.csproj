@@ -51,9 +51,10 @@
     <PackageReference Include="Dolittle.Runtime.Queries" Version="2.0.0-alpha2*" />
     <PackageReference Include="Dolittle.Runtime.Queries.Coordination" Version="2.0.0-alpha2*" />
 
+    <PackageReference Include="Dolittle.ReadModels.MongoDB" Version="2.0.0-alpha2*" />
+
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="2.0.0" />
-    <PackageReference Include="MongoDB.Driver" Version="2.4.4" />
     <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
   </ItemGroup>
 
