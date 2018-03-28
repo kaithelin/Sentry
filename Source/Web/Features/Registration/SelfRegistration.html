@@ -4,7 +4,8 @@
             <h1>Register profile</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo amet sapiente eum consectetur dolorem, non earum
                 error, officiis praesentium quas reiciendis dicta. Commodi perferendis voluptate incidunt culpa itaque. Labore,
-                mollitia?</p>
+                mollitia?
+            </p>
 
             <ul class="registration-fields">
                 <li>
@@ -25,7 +26,24 @@
                     </label>
                     <input type="number" name="profile-name">
                 </li>
+                <li>
+                    <label>
+                        National society:
+                    </label>
+                    <select name="national-society">
+                        <option value="Country-1"> Country 1</option>
+                        <option value="Country-2"> Country 2</option>
+                        <option value="Country-3"> Country 3</option>
+                        <option value="Country-4"> Country 4</option>
+                        <option value="Country-5"> Country 5</option>
+                        <option value="Country-6"> Country 6</option>
+                    </select>
+                </li>
             </ul>
+            <div class="button-row">
+                    <button type="reset">Discard changes</button>
+                    <button type="submit" class="primary">Save profile changes</button>
+                </div>
         </div>
     </section>
 </template>
