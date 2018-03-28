@@ -1,0 +1,10 @@
+.content-box {
+    background-color: #fff;
+    border-radius: .25rem;
+    box-shadow: .3125rem .3125rem 0 darken($color-medium-grey, 15%);
+    padding: $grid-gutter;
+}
+
+.narrow-column {
+    @extend %fixed-width-at-tablet;
+}

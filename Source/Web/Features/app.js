@@ -7,10 +7,10 @@ export class index {
     }
 
     configureRouter(config, router) {
-        this.router = router;
         config.map([
-            { route: ['', 'welcome'],       name: 'welcome',    moduleId: PLATFORM.moduleName('welcome') },
-            { route: 'Accounts/Login',      name: 'Login',      moduleId: PLATFORM.moduleName('Accounts/Login') }
-        ])
+            { route: ['', 'welcome'], name: 'welcome', moduleId: PLATFORM.moduleName('welcome') },
+            { route: 'Accounts/Login', name: 'Login', moduleId: PLATFORM.moduleName('Accounts/Login') }
+        ]);
+        this.router = router;
     }
 }
