@@ -4,12 +4,14 @@
   "description": "",
   "main": "karma.conf.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "./run.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "dolittle.javascript.build": "github:dolittle/JavaScript.Build.git",
-    "dolittle.javascript.build.aurelia": "github:dolittle-interaction/JavaScript.Build.Aurelia.git"
+    "dolittle.javascript.build.aurelia": "github:dolittle-interaction/JavaScript.Build.Aurelia.git",
+    "dolittle.styles": "github:dolittle/dolittle.styles.git"
   }
 }
