@@ -7,4 +7,5 @@
 
 .narrow-column {
     @extend %fixed-width-at-tablet;
+    margin: 0 auto;
 }
