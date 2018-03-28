@@ -1,4 +1,5 @@
 import { PLATFORM } from 'aurelia-pal';
+import style from '../styles/style.scss';
 
 export class index {
     constructor() {
