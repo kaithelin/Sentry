@@ -1,1 +1,37 @@
-<template></template>
+<template>
+    <require from="./Consent.scss"></require>
+    <section class="consent narrow-column">
+        <div class="content-box">
+            <h1>Consent</h1>
+            <p>
+                <strong>AppName</strong> is requesting access.</p>
+            <ul class="option-list">
+                <li>
+                    <label>
+                        <input type="checkbox" name="feature-name-0" disabled checked> Your user identity
+                        <em>(required)</em>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="feature-name-1" checked> User profile
+                    </label>
+                    <small class="feature-description">Your user profile</small>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="feature-name-2" disabled checked> National society you belong to
+                        <em>(required)</em>
+                    </label>
+                </li>
+            </ul>
+            <label>
+                <input type="checkbox" name="remember-answer"> Remember my answer
+            </label>
+            <div class="button-row">
+                <button type="reset">No, do not allow</button>
+                <button type="submit" class="primary">Yes, allow</button>
+            </div>
+        </div>
+    </section>
+</template>

@@ -8,6 +8,7 @@
         margin-bottom: $grid-gutter;
         a {
             display: flex;
+            align-items: center;
             padding: $grid-gutter/2;
             width: 100%;
         }
