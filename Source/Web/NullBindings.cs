@@ -55,14 +55,14 @@ namespace Web
                 )
 
                 .StructureMappedTo(_ => _
-                    .Domain("Source.-^{Feature}.-^{SubFeature}*")
-                    .Domain("Source.-^{Module}.-^{Feature}.-^{SubFeature}*")
-                    .Events("Source.-^{Feature}.-^{SubFeature}*")
-                    .Events("Source.-^{Module}.-^{Feature}.-^{SubFeature}*")
-                    .Read("Source.-^{Feature}.-^{SubFeature}*")
-                    .Read("Source.-^{Module}.-^{Feature}.-^{SubFeature}*")
-                    .Frontend("Source.-^{Feature}.-^{SubFeature}*")
-                    .Frontend("Source.-^{Module}.-^{Feature}.-^{SubFeature}*")
+                    .Domain("Domain.-^{Feature}.-^{SubFeature}*")
+                    .Domain("Domain.-^{Module}.-^{Feature}.-^{SubFeature}*")
+                    .Events("Events.-^{Feature}.-^{SubFeature}*")
+                    .Events("Events.-^{Module}.-^{Feature}.-^{SubFeature}*")
+                    .Read("Read.-^{Feature}.-^{SubFeature}*")
+                    .Read("Read.-^{Module}.-^{Feature}.-^{SubFeature}*")
+                    .Frontend("Web.-^{Feature}.-^{SubFeature}*")
+                    .Frontend("Web.-^{Module}.-^{Feature}.-^{SubFeature}*")
                 );
 
             (IApplication application, IApplicationStructureMap structureMap)applicationConfiguration = applicationConfigurationBuilder.Build();
