@@ -1,0 +1,19 @@
+button {
+    background-color: $color-light-grey;
+    border: none;
+    border-radius: .375rem;
+    box-shadow: .125rem .125rem 0 darken($color-medium-grey, 15%);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: $grid-gutter/3 0;
+    padding: .5rem 1rem;
+    transition: transform .1s;
+    &:active {
+        transform: scale(.975);
+    }
+    &.primary {
+        background-color: $color-brand-light-blue;
+        box-shadow: .125rem .125rem 0 darken($color-brand-light-blue, 20%);
+        color: #fff;
+    }
+}

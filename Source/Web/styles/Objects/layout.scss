@@ -9,3 +9,9 @@
     @extend %fixed-width-at-tablet;
     margin: 0 auto;
 }
+
+.button-row {
+    @extend %flex-container-horizontal;
+    justify-content: space-between;
+    padding: $grid-gutter;
+}
