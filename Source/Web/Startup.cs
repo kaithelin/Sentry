@@ -150,6 +150,7 @@ namespace Web
             // Keep this last as this is the fallback when nothing else works - spit out the index file           
             app.Run(async context =>
             {
+                if( Path.HasExtension(context.Request.Path)) await Task.CompletedTask;
                 context.Request.Path = new PathString("/");
                 var path = $"{env.ContentRootPath}/wwwroot/index.html";
                 await context.Response.SendFileAsync(new PhysicalFileInfo(new FileInfo(path)));
