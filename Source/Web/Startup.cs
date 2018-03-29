@@ -47,19 +47,12 @@ namespace Web
                     options.UserInteraction.ConsentUrl = "/accounts/consent";
                 })
 
-                //.AddEndpoint<DiscoveryEndpoint>("Discovery", "/tenant/.well-known/openid-configuration")
                 .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryApiResources(Config.GetApiResources())
                 .AddInMemoryClients(Config.GetClients())
                 .AddInMemoryPersistedGrants()
                 .AddProfileService<MyProfileService>();;
 
-            /*
-            var routerService = services.Single(_ => _.ServiceType == typeof(IEndpointRouter));
-            services.Remove(routerService);
-            MultiTenantEndpointRouter.OriginalEndpointRouterType = routerService.ImplementationType;
-            services.Add(new ServiceDescriptor(typeof(IEndpointRouter), typeof(MultiTenantEndpointRouter), ServiceLifetime.Transient));
-            */
 
             services.AddAuthentication()
                 .AddOpenIdConnect("oidc", "Azure Active Directory", options =>
@@ -140,9 +133,6 @@ namespace Web
                 app.UseDeveloperExceptionPage();
             }
 
-            // http://localhost:5000/fed43fa7-5279-4e72-9dbf-a344c17270e3/connect/authorize?client_id=mvc&redirect_uri=http%3A%2F%2Flocalhost%3A5002%2Fsignin-oidc&response_type=id_token&scope=openid%20profile%20nationalsociety&response_mode=form_post&nonce=636576009978909860.ZWM0OTAxOTUtMzA0YS00NGI3LTgyNTItNGUyYmYwNWNkOWI0OGNhZDJhZjEtZjI2YS00NjY1LWI0MjUtODYyMTBmZDVhNzA5&state=CfDJ8FkuBDQp5kBMuHK8ZpYHNkn8ujvBDCurPEFddBTQkowjY_0imbzRgHTv99iFVlFJ2tPOzxiCetxThElZJz3J5yHs31PLr1QX1ytMGAnc2xr-q_e07-F6TqZR-LcLPmDsKshlOYUGz_2xte8y7oF6IrB7_kWuK9gXj5cmxjt3ckMwUJ2LGt433Q5RIZFsXAThoyo6WLl1odpETZ5yZ_NZ-uAY_2Teqk3R_tvnA1CihcQPaknM4jLoSh_EW_2WASZxhsgT7RRU0wfLZPtrGR1-tKSdgkXqehAgOIKSQe9pY7NKBUtpB6dAvuIyYs-cGaLNsBLOJhuVer8SCN1IL9A4nMw&x-client-SKU=ID_NET&x-client-ver=2.1.4.0
-            // http://localhost:5000/login.html?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dmvc%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A5002%252Fsignin-oidc%26response_type%3Did_token%26scope%3Dopenid%2520profile%2520nationalsociety%26response_mode%3Dform_post%26nonce%3D636576009978909860.ZWM0OTAxOTUtMzA0YS00NGI3LTgyNTItNGUyYmYwNWNkOWI0OGNhZDJhZjEtZjI2YS00NjY1LWI0MjUtODYyMTBmZDVhNzA5%26state%3DCfDJ8FkuBDQp5kBMuHK8ZpYHNkn8ujvBDCurPEFddBTQkowjY_0imbzRgHTv99iFVlFJ2tPOzxiCetxThElZJz3J5yHs31PLr1QX1ytMGAnc2xr-q_e07-F6TqZR-LcLPmDsKshlOYUGz_2xte8y7oF6IrB7_kWuK9gXj5cmxjt3ckMwUJ2LGt433Q5RIZFsXAThoyo6WLl1odpETZ5yZ_NZ-uAY_2Teqk3R_tvnA1CihcQPaknM4jLoSh_EW_2WASZxhsgT7RRU0wfLZPtrGR1-tKSdgkXqehAgOIKSQe9pY7NKBUtpB6dAvuIyYs-cGaLNsBLOJhuVer8SCN1IL9A4nMw%26x-client-SKU%3DID_NET%26x-client-ver%3D2.1.4.0
-
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
@@ -152,16 +142,10 @@ namespace Web
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
 
-            //var routeBuilder = new RouteBuilder(app);
-            //var guidRegex = @"^(\{{0,1}([0-9a-fA-F]){8}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){12}\}{0,1})$";
-
-            //var guidRegex = @"[\da-zA-Z]{{8}}-([\da-zA-Z]{{4}}-){{3}}[\da-zA-Z]{{12}}";
-            // :regex("+guidRegex+");
-            //routeBuilder.MapMiddlewareRoute("{tenant:regex("+guidRegex+")}/{*pathInfo}", _ => _.UseMiddleware<TenantExtractorMiddleware>());
-            //app.UseRouter(routeBuilder.Build());
-
             app.UseMiddleware<TenantMiddleware>();
             app.UseIdentityServer();
+
+            app.UseMvc();
 
             // Keep this last as this is the fallback when nothing else works - spit out the index file           
             app.Run(async context =>
