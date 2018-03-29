@@ -42,9 +42,9 @@ namespace Web
 
             services.AddIdentityServer(options =>
                 {
-                    options.UserInteraction.LoginUrl = "#accounts/login";
-                    options.UserInteraction.LogoutUrl = "/logout.html";
-                    options.UserInteraction.ConsentUrl = "/consent.html";
+                    options.UserInteraction.LoginUrl = "/accounts/login";
+                    options.UserInteraction.LogoutUrl = "/accounts/logout";
+                    options.UserInteraction.ConsentUrl = "/accounts/consent";
                 })
 
                 //.AddEndpoint<DiscoveryEndpoint>("Discovery", "/tenant/.well-known/openid-configuration")
@@ -54,10 +54,12 @@ namespace Web
                 .AddInMemoryPersistedGrants()
                 .AddProfileService<MyProfileService>();;
 
+            /*
             var routerService = services.Single(_ => _.ServiceType == typeof(IEndpointRouter));
             services.Remove(routerService);
             MultiTenantEndpointRouter.OriginalEndpointRouterType = routerService.ImplementationType;
             services.Add(new ServiceDescriptor(typeof(IEndpointRouter), typeof(MultiTenantEndpointRouter), ServiceLifetime.Transient));
+            */
 
             services.AddAuthentication()
                 .AddOpenIdConnect("oidc", "Azure Active Directory", options =>
