@@ -1,7 +1,7 @@
 export class Login {
     authorities = [
-        { id: '0', name: 'Username & Password' },
-        { id: '1', name: 'Google' }
+        { id: '0', name: 'Username & Password', url: '', icon: '' },
+        { id: '1', name: 'Google', url: '', icon: '' }
     ];
 
     id = '';

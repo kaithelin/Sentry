@@ -7,76 +7,15 @@
             <span>${id}</span>
             <ul class="option-list" repeat.for="authority of authorities">
                 <li>
-                    <a route-href="route: Consent; params.bind: {id:id}">
+                    <a href="${authority.url}">
                         <figure>
-                            <img src="#foo" alt="icon">
+                            <img src="${authority.icon}" alt="icon">
                         </figure>
                         <div>
                             <strong class="provider-name">${authority.name}</strong>
                         </div>
                     </a>
                 </li>
-                <!--
-                <li>
-                    <a route-href="Consent">
-                        <figure>
-                            <img src="#foo" alt="icon">
-                        </figure>
-                        <div>
-                            <strong class="provider-name">Provider name</strong>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a route-href="Consent">
-                        <figure>
-                            <img src="#foo" alt="icon">
-                        </figure>
-                        <div>
-                            <strong class="provider-name">Provider name</strong>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a route-href="Consent">
-                        <figure>
-                            <img src="#foo" alt="icon">
-                        </figure>
-                        <div>
-                            <strong class="provider-name">Provider name</strong>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a route-href="Consent">
-                        <figure>
-                            <img src="#foo" alt="icon">
-                        </figure>
-                        <div>
-                            <strong class="provider-name">Provider name</strong>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a route-href="Consent">
-                        <figure>
-                            <img src="#foo" alt="icon">
-                        </figure>
-                        <div>
-                            <strong class="provider-name">Provider name</strong>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a route-href="Consent">
-                        <figure>
-                            <img src="#foo" alt="icon">
-                        </figure>
-                        <div>
-                            <strong class="provider-name">Provider name</strong>
-                        </div>
-                    </a>
-                </li>-->
             </ul>
         </div>
     </section>
