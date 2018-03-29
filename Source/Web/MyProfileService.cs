@@ -32,7 +32,7 @@ namespace Web
     /// </summary>
     public class MyProfileService : IProfileService
     {
-        internal static Guid Tenant;
+        
         /// <summary>
         /// 
         /// </summary>
