@@ -1,4 +1,4 @@
-export class SelfRegistration {
+export class RequestAccess {
     constructor() {
         
     }
