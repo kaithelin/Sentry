@@ -7,7 +7,7 @@ using Dolittle.Concepts;
 namespace Concepts
 {
     /// <summary>
-    /// 
+    /// Represents a claim that is associated with a user
     /// </summary>
     public class Claim : Value<Claim>
     {
