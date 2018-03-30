@@ -37,6 +37,9 @@ export class Login {
             .then(data => {
                 let authorities = JSON.parse(data.response);
                 authorities.forEach(authority => {
+                    // Temp fix: serialization is not hooked up
+                    authority.id = authority.id.value;
+                    authority.tenant = self.tenant;
                     self.authorities.push(authority);
                 });
             });
