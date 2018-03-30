@@ -2,6 +2,7 @@
  *  Copyright (c) Dolittle. All rights reserved.
  *  Licensed under the MIT License. See LICENSE in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
+using Concepts;
 using Dolittle.ReadModels;
 
 namespace Read
@@ -11,6 +12,21 @@ namespace Read
     /// </summary>
     public class Authority : IReadModel
     {
+        /// <summary>
+        /// Gets or sets the <see cref="AuthorityId"/>
+        /// </summary>
+        public AuthorityId Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the url for the authority
+        /// </summary>
+        public string Url { get; set; }
+
+        /// <summary>
+        /// Gets or sets the client id used towards the authority
+        /// </summary>
+        public string ClientId { get; set; }
+
         /// <summary>
         /// Gets or sets the name of the authority
         /// </summary>
