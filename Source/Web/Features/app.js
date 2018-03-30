@@ -10,9 +10,9 @@ export class index {
         config.options.pushState = true;
         config.map([
             { route: ['', 'welcome'], name: 'welcome', moduleId: PLATFORM.moduleName('welcome') },
-            { route: ':id/Accounts/Login', name: 'Login', moduleId: PLATFORM.moduleName('Accounts/Login') },
-            { route: ':id/Accounts/Consent', name: 'Consent', moduleId: PLATFORM.moduleName('Accounts/Consent') },
-            { route: ':id/Registration/SelfRegistration', name: 'SelfRegistration', moduleId: PLATFORM.moduleName('Registration/SelfRegistration') }
+            { route: ':tenant/Accounts/Login', name: 'Login', moduleId: PLATFORM.moduleName('Accounts/Login') },
+            { route: ':tenant/Accounts/Consent', name: 'Consent', moduleId: PLATFORM.moduleName('Accounts/Consent') },
+            { route: ':tenant/:application/Registration/RequestAccess', name: 'RequestAccess', moduleId: PLATFORM.moduleName('Registration/RequestAccess') }
         ]);
         this.router = router;
     }
