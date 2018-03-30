@@ -89,9 +89,11 @@ namespace Web.Features.Accounts
             {
                 RedirectUri = Url.Action("ExternalLoginCallback"),
 
-                Items = { { "tenant", tenant },
-                { "scheme", authority },
-                { "returnUrl", returnUrl }
+                Items = 
+                { 
+                    { "tenant", tenant },
+                    { "scheme", authority },
+                    { "returnUrl", returnUrl }
                 }
             };
             return Challenge(properties, authority);
