@@ -4,18 +4,21 @@
  *--------------------------------------------------------------------------------------------*/
 using Dolittle.Concepts;
 
-namespace Concepts
+namespace Concepts.Claims
 {
     /// <summary>
-    /// Represents a name of a claim
+    /// Represents a claim that is associated with a user
     /// </summary>
-    public class ClaimName : ConceptAs<string>
+    public class Claim : Value<Claim>
     {
         /// <summary>
-        /// Implicitly convert from <see cref="string"/> representation of a claim name to a <see cref="ClaimName"/>
+        /// Gets or sets the <see cref="ClaimName"/>
         /// </summary>
-        /// <param name="claimName">Claim as <see cref="string"/> </param>
-        public static implicit operator ClaimName(string claimName) => new ClaimName { Value = claimName };
+        public ClaimName Name { get; set; }
 
+        /// <summary>
+        /// Gets or sets the <see cref="ClaimValues"/>
+        /// </summary>
+        public ClaimValues Values { get; set; }
     }
 }

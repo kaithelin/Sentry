@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 using Dolittle.Concepts;
 
-namespace Concepts
+namespace Concepts.Claims
 {
     /// <summary>
     /// Rerepsents a value of a claim

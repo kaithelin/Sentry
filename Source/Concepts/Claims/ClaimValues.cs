@@ -5,7 +5,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Concepts
+namespace Concepts.Claims
 {
     /// <summary>
     /// Represents a collection of <see cref="ClaimValue"/>
