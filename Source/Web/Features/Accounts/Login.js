@@ -23,13 +23,10 @@ export class Login {
     }
 
     /**
-     * Method that gets called when view and view model is attached.
-     * The reason for using this rather than activate/activated is that this particular feature
-     * is being used as both a stand alone view and can be used as partial to other views
+     * Method that gets called when view and view model is activated.
      */
-    attached() {
+    activate(params) {
         let self = this;
-        let params = this.router.currentInstruction.params;
         this.tenant = params.tenant;
 
         let client = new HttpClient();
@@ -37,7 +34,7 @@ export class Login {
             .then(data => {
                 let authorities = JSON.parse(data.response);
                 authorities.forEach(authority => {
-                    // Temp fix: serialization is not hooked up
+                    // Todo: serialization is not hooked up
                     authority.id = authority.id.value;
                     authority.tenant = self.tenant;
                     self.authorities.push(authority);
