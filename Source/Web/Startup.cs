@@ -2,6 +2,8 @@
  *  Copyright (c) Dolittle. All rights reserved.
  *  Licensed under the MIT License. See LICENSE in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,6 +24,11 @@ namespace Web
 {
     /// <summary>
     /// 
+    /// be4c4da6-5ede-405f-a947-8aedad564b7f - Tenant       - Red Cross
+    /// 25c7ddac-dd1b-482a-8638-aaa909fd1f1c - Application  - CBS
+    /// 
+    /// Authorities:
+    /// 9b296977-7657-4bc8-b5b0-3f0a23c43958 - Azure Active Directory
     /// </summary>
     public partial class Startup
     {
@@ -33,6 +40,8 @@ namespace Web
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
+            // Todo: understand anti forgery
+            services.AddAntiforgery();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
@@ -46,7 +55,7 @@ namespace Web
                     options.UserInteraction.LogoutUrl = "/accounts/logout";
                     options.UserInteraction.ConsentUrl = "/accounts/consent";
                 })
-
+                .AddDeveloperSigningCredential()
                 .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryApiResources(Config.GetApiResources())
                 .AddInMemoryClients(Config.GetClients())
@@ -55,40 +64,23 @@ namespace Web
 
 
             services.AddAuthentication()
-                .AddOpenIdConnect("oidc", "Azure Active Directory", options =>
+                .AddOpenIdConnect("9b296977-7657-4bc8-b5b0-3f0a23c43958", "Azure Active Directory", options =>
                 {
-                    options.CallbackPath = "/signin-oidc";
+                    options.CallbackPath = "/signin-oidc-9b296977-7657-4bc8-b5b0-3f0a23c43958";
                     options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
                     options.SignOutScheme = IdentityServerConstants.SignoutScheme;
 
-                    // be4c4da6-5ede-405f-a947-8aedad564b7f
-
                     // https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-protocols-oidc
-
                     // https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration
+                    // https://login.microsoftonline.com/381088c1-de08-4d18-9e60-bbe2c94eccb5/v2.0/.well-known/openid-configuration
                     //options.Authority = "https://login.microsoftonline.com/381088c1-de08-4d18-9e60-bbe2c94eccb5/v2.0";
                     options.Authority = "https://login.microsoftonline.com/common";
-
-                    // organizations
                     options.ClientId = "Blah";
-                    //options.ClientId = "2e2cad73-c11a-4d9f-8af9-beeebcdc5a27";
-                    //options.ClientSecret = "jW6L65FIXZmsY6kIM+TKYws3zFJ03MyCAF9sFpIbFMs=";
-
-                    //options.Events.RedirectToIdentityProvider
 
                     options.Events.OnRedirectToIdentityProvider = async(context)=>
                     {
-                        /*
-                        options.TokenValidationParameters.AudienceValidator = (IEnumerable<string> audiences, SecurityToken securityToken, TokenValidationParameters validationParameters) =>
-                        {
-                            
-                            return true; 
-                        };*/
-
-                        //context.Options.TokenValidationParameters.
-                        //context.Options.ClientId = "2e2cad73-c11a-4d9f-8af9-beeebcdc5a27";
+                        context.Options.Authority = "https://login.microsoftonline.com/381088c1-de08-4d18-9e60-bbe2c94eccb5/v2.0";
                         context.ProtocolMessage.ClientId = "2e2cad73-c11a-4d9f-8af9-beeebcdc5a27";
-
                         await Task.CompletedTask;
                     };
 
