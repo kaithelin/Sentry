@@ -1,9 +1,12 @@
 import { PLATFORM } from 'aurelia-pal';
 import style from '../styles/style.scss';
+import { OpenIdConnect, OpenIdConnectRoles } from "aurelia-open-id-connect";
+import { inject } from 'aurelia-dependency-injection';
 
-export class index {
-    constructor() {
-
+@inject(OpenIdConnect)
+export class app {
+    constructor(openIdConnect) {
+        this._openIdConnect = openIdConnect;
     }
 
     configureRouter(config, router) {
@@ -12,8 +15,15 @@ export class index {
             { route: ['', 'welcome'], name: 'welcome', moduleId: PLATFORM.moduleName('welcome') },
             { route: ':tenant/Accounts/Login', name: 'Login', moduleId: PLATFORM.moduleName('Accounts/Login') },
             { route: ':tenant/Accounts/Consent', name: 'Consent', moduleId: PLATFORM.moduleName('Accounts/Consent') },
-            { route: ':tenant/:application/Registration/RequestAccess', name: 'RequestAccess', moduleId: PLATFORM.moduleName('Registration/RequestAccess') }
+            {
+                route: ':tenant/:application/Registration/RequestAccess', name: 'RequestAccess', moduleId: PLATFORM.moduleName('Registration/RequestAccess'), settings: {
+                    roles: [OpenIdConnectRoles.Authenticated],
+                }
+            }
         ]);
+
+        this._openIdConnect.configure(config);
+
         this.router = router;
     }
 }
