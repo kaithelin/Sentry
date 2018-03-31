@@ -22,6 +22,7 @@ namespace Web.Features.Accounts
     /// 
     /// </summary>
     [SecurityHeaders]
+    [Route("Accounts")]
     public class AccountsController : Controller
     {
         readonly IIdentityServerInteractionService _interaction;
@@ -48,7 +49,7 @@ namespace Web.Features.Accounts
         /// 
         /// </summary>
         /// <returns></returns>
-        [HttpGet("Accounts/Authorities")]
+        [HttpGet("Authorities")]
         public async Task<IActionResult> Authorities()
         {
             var schemes = await _schemeProvider.GetAllSchemesAsync();
@@ -79,7 +80,7 @@ namespace Web.Features.Accounts
         /// <param name="authority"></param>
         /// <param name="returnUrl"></param>
         /// <returns></returns>
-        [HttpGet("Accounts/ExternalLogin")]
+        [HttpGet("ExternalLogin")]
         public IActionResult ExternalLogin(
             [FromQuery] string tenant, 
             [FromQuery] string authority, 
@@ -103,7 +104,7 @@ namespace Web.Features.Accounts
         /// 
         /// </summary>
         /// <returns></returns>
-        [HttpGet("Accounts/ExtenalLoginCallback")]
+        [HttpGet("ExternalLoginCallback")]
         public async Task<IActionResult> ExternalLoginCallback()
         {
             var result = await HttpContext.AuthenticateAsync(IdentityServer4.IdentityServerConstants.ExternalCookieAuthenticationScheme);
