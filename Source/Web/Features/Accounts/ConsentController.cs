@@ -5,7 +5,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Concepts.Scopes;
 using IdentityServer4.Models;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
@@ -96,9 +95,9 @@ namespace Web.Features.Accounts
         /// <returns></returns>
         [HttpPost("Grant")]
         public async Task<IActionResult> Grant(
-            [FromBody]IEnumerable<string> scopes,
-            [FromQuery]string returnUrl,
-            [FromQuery]bool rememberConsent
+            [FromForm]IEnumerable<string> scopes,
+            [FromForm]string returnUrl,
+            [FromForm]bool rememberConsent
         )
         {
             var grantedConsent = new ConsentResponse
@@ -107,15 +106,15 @@ namespace Web.Features.Accounts
                 ScopesConsented = scopes
             };
             var request = await _interaction.GetAuthorizationContextAsync(returnUrl);
-
             await _interaction.GrantConsentAsync(request, grantedConsent);
+            
             return Redirect(returnUrl);
         }
 
         /*
 
-        [HttpPost("Refuse")]
-        public async Task<IActionResult> Refuse()
+        [HttpPost("Deny")]
+        public async Task<IActionResult> Deny()
         {
 
         }*/
