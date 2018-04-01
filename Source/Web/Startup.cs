@@ -34,6 +34,7 @@ namespace Web
         /// <inheritdoc/>
         public Task DeleteAsync(string id)
         {
+            _consents.Remove(id);
             return Task.CompletedTask;
         }
 
@@ -41,7 +42,7 @@ namespace Web
         public Task<Message<ConsentResponse>> ReadAsync(string id)
         {
             Message<ConsentResponse> result;
-            if( !_consents.ContainsKey(id)) result = new Message<ConsentResponse>(new ConsentResponse(), DateTime.UtcNow);
+            if( !_consents.ContainsKey(id)) result = null;
             else result = _consents[id];
             return Task.FromResult(result);
         }
