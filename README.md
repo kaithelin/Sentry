@@ -1,4 +1,4 @@
-# Build
+# Sentry
 
 This is the main repository for the Dolittle Sentry identity, access and licensing system
 
