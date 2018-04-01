@@ -2,42 +2,35 @@
     <require from="./Consent.scss"></require>
     <section class="consent narrow-column">
         <div class="content-box">
-            <h1>Consent</h1>
-            <p>
-                <strong>${information.clientName}</strong> is requesting access to the following:</p>
-            <ul class="option-list" repeat.for="scope of information.identityScopes">
-                <li>
-                    <label>
-                        <input  type="checkbox" 
-                                disabled.one-time="scope.required" 
-                                checked.bind="scope.checked">
-                                ${scope.displayName.value}
-                        <em if.bind="scope.required">(required)</em>
-                    </label>
-                    <small class="scope-description">${scope.description.value}</small>
-                </li>
+            <form action="/Consent/Grant" role="form" method="post">
+                <input type="hidden" name="returnUrl" value.one-time="returnUrl">
 
-                <!--
-                <li>
-                    <label>
-                        <input type="checkbox" name="feature-name-1" checked> User profile
-                    </label>
-                    <small class="feature-description">Your user profile</small>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox" name="feature-name-2" disabled checked> National society you belong to
-                        <em>(required)</em>
-                    </label>
-                </li>-->
-            </ul>
-            <label>
-                <input type="checkbox" name="remember-answer" checked.bind="rememberConsent"> Remember my answer
-            </label>
-            <div class="button-row">
-                <button type="reset" click.delegate="notAllow()">No, do not allow</button>
-                <button type="submit" class="primary" click.delegate="allow()">Yes, allow</button>
-            </div>
+                <template repeat.for="scope of scopes">
+                    <input type="hidden" name="scopes" value="${scope}">
+                </template>
+
+                <h1>Consent</h1>
+                <p>
+                    <strong>${information.clientName}</strong> is requesting access to the following:</p>
+                <ul class="option-list" repeat.for="scope of information.identityScopes">
+                    <li>
+                        <label>
+                            <input type="checkbox" disabled.one-time="scope.required" checked.bind="scope.checked"> ${scope.displayName.value}
+                            <em if.bind="scope.required">(required)</em>
+                        </label>
+                        <small class="scope-description">${scope.description.value}</small>
+                    </li>
+                </ul>
+                <label>
+                    <input type="checkbox" name="rememberConsent" checked.bind="rememberConsent"> Remember my answer
+                </label>
+                <div class="button-row">
+                    <button type="reset" click.delegate="notAllow()">No, do not allow</button>
+                    <button type="submit" class="primary" >Yes, allow</button>
+
+                    <!-- click.delegate="allow()" -->
+                </div>
+            </form>
         </div>
     </section>
 </template>
