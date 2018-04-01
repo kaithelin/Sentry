@@ -12,6 +12,8 @@ using Dolittle.DependencyInversion.Autofac;
 using Dolittle.Runtime.Events.Coordination;
 using IdentityServer4;
 using IdentityServer4.Hosting;
+using IdentityServer4.Models;
+using IdentityServer4.Stores;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -22,6 +24,36 @@ using Swashbuckle.AspNetCore.Swagger;
 
 namespace Web
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    public class MyStore : IConsentMessageStore
+    {
+        static readonly Dictionary<string, Message<ConsentResponse>> _consents = new Dictionary<string, Message<ConsentResponse>>();
+
+        /// <inheritdoc/>
+        public Task DeleteAsync(string id)
+        {
+            return Task.CompletedTask;
+        }
+
+        /// <inheritdoc/>
+        public Task<Message<ConsentResponse>> ReadAsync(string id)
+        {
+            Message<ConsentResponse> result;
+            if( !_consents.ContainsKey(id)) result = new Message<ConsentResponse>(new ConsentResponse(), DateTime.UtcNow);
+            else result = _consents[id];
+            return Task.FromResult(result);
+        }
+
+        /// <inheritdoc/>
+        public Task WriteAsync(string id, Message<ConsentResponse> message)
+        {
+            _consents[id] = message;
+            return Task.CompletedTask;
+        }
+    }
+
     /// <summary>
     /// 
     /// be4c4da6-5ede-405f-a947-8aedad564b7f - Tenant       - Red Cross
@@ -41,7 +73,7 @@ namespace Web
         public void ConfigureServices(IServiceCollection services)
         {
             // Todo: understand anti forgery
-            services.AddAntiforgery();
+            //services.AddAntiforgery();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
@@ -54,14 +86,17 @@ namespace Web
                     options.UserInteraction.LoginUrl = "/accounts/login";
                     options.UserInteraction.LogoutUrl = "/accounts/logout";
                     options.UserInteraction.ConsentUrl = "/accounts/consent";
+                    //options.Authentication.CheckSessionCookieName = "sentry.session";
                 })
                 .AddDeveloperSigningCredential()
                 .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryApiResources(Config.GetApiResources())
                 .AddInMemoryClients(Config.GetClients())
                 .AddInMemoryPersistedGrants()
-                .AddProfileService<MyProfileService>();;
+                .AddProfileService<MyProfileService>();
+                
 
+            services.Add(new ServiceDescriptor(typeof(IConsentMessageStore), typeof(MyStore), ServiceLifetime.Transient));
 
             services.AddAuthentication()
                 .AddOpenIdConnect("9b296977-7657-4bc8-b5b0-3f0a23c43958", "Azure Active Directory", options =>
