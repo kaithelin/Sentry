@@ -15,8 +15,7 @@ export class app {
             { route: ['', 'welcome'], name: 'welcome', moduleId: PLATFORM.moduleName('welcome') },
             { route: ':tenant/Accounts/Login', name: 'Login', moduleId: PLATFORM.moduleName('Accounts/Login') },
             { route: ':tenant/Accounts/Consent', name: 'Consent', moduleId: PLATFORM.moduleName('Accounts/Consent') },
-            { route: ':tenant/:application/Registration/RequestAccess', name: 'RequestAccess', moduleId: PLATFORM.moduleName('Registration/RequestAccess') },
-            { route: 'Registration/RequestAccessOidcCallback', name: 'RequestAccessOidcCallback', moduleId: PLATFORM.moduleName('Registration/RequestAccessOidcCallback') }
+            { route: ['Registration/RequestAccessOidcCallback', ':tenant/:application/Registration/RequestAccess'], name: 'RequestAccess', moduleId: PLATFORM.moduleName('Registration/RequestAccess') },
         ]);
 
         this._openIdConnect.configure(config);
