@@ -95,38 +95,29 @@ namespace Web
                 // OpenID Connect implicit flow client (MVC)
                 new Client
                 {
-                    ClientId = "mvc",
-                    ClientName = "MVC Client",
-                    AllowedGrantTypes = GrantTypes.Implicit,
-
-                    RedirectUris = { "http://localhost:5002/signin-oidc", "http://localhost:5000/signin-oidc" },
-                    PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc", "http://localhost:5000/signout-callback-oidc" },
-
-                    AllowedScopes =
-                    {
-                        IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile,
-                        "nationalsociety"
-                    }
-                },
-
-                new Client
-                {
                     ClientId = "25c7ddac-dd1b-482a-8638-aaa909fd1f1c",
-                    ClientName = "Ourself",
+                    ClientName = "CBS",
                     AllowedGrantTypes = GrantTypes.Implicit,
 
-                    RedirectUris = { "http://localhost:5002/signin-oidc", "http://localhost:5000/signin-oidc" },
-                    PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc", "http://localhost:5000/signout-callback-oidc" },
+                    RedirectUris = { 
+                        "http://localhost:5002/signin-oidc", 
+                        "http://localhost:5000/signin-oidc",
+                        "http://localhost:5000/Registration/RequestAccessOidcCallback"
+                    },
+                    PostLogoutRedirectUris = { 
+                        "http://localhost:5002/signout-callback-oidc", 
+                        "http://localhost:5000/signout-callback-oidc" 
+                    },
 
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         "nationalsociety"
-                    }
+                    }//,
+
+                    //AllowAccessTokensViaBrowser = true
                 }
-                
             };
         }
     }

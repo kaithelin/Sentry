@@ -1,10 +1,25 @@
 <template>
-    <section class="request-access narrow-column">
+    <section class="login narrow-column" if.bind="!isLoggedIn">
         <div class="content-box">
-            <h1>Register profile</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo amet sapiente eum consectetur dolorem, non earum
-                error, officiis praesentium quas reiciendis dicta. Commodi perferendis voluptate incidunt culpa itaque. Labore,
-                mollitia?
+            <h1>Request Access</h1>
+            <h2>Login</h2>
+            <p>
+                To request access we must log you in with one of the supported identity authorities. Please click the login button to start
+                the process.
+            </p>
+
+            <div class="button-row">
+                <button type="submit" class="primary" click.delegate="login()">Login</button>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="request-access narrow-column" if.bind="isLoggedIn">
+        <div class="content-box">
+            <h1>Request Access</h1>
+            <p>
+                We need the following information before we can submit a request
             </p>
 
             <ul class="registration-fields">
@@ -41,9 +56,9 @@
                 </li>
             </ul>
             <div class="button-row">
-                    <button type="reset">Discard changes</button>
-                    <button type="submit" class="primary">Save profile changes</button>
-                </div>
+                <button type="reset">Cancel</button>
+                <button type="submit" class="primary">Submit Request</button>
+            </div>
         </div>
     </section>
 </template>
