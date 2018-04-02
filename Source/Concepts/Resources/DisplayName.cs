@@ -4,17 +4,17 @@
  *--------------------------------------------------------------------------------------------*/
 using Dolittle.Concepts;
 
-namespace Concepts.IdentityResources
+namespace Concepts.Resources
 {
     /// <summary>
     /// Represents the concept of a name for an identity resource
     /// </summary>
-    public class Description : ConceptAs<string>
+    public class DisplayName : ConceptAs<string>
     {
         /// <summary>
         /// Implicitly convert from <see cref="string"/> to <see cref="Name"/>
         /// </summary>
-        /// <param name="description"><see cref="string"/> representation</param>
-        public static implicit operator Description(string description) => new Description { Value = description };
-    }        
+        /// <param name="displayName"><see cref="string"/> representation</param>
+        public static implicit operator DisplayName(string displayName) => new DisplayName { Value = displayName };
+    }
 }

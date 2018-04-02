@@ -2,19 +2,21 @@
  *  Copyright (c) Dolittle. All rights reserved.
  *  Licensed under the MIT License. See LICENSE in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-using Concepts.IdentityResources;
-using Dolittle.Commands;
+using Dolittle.Concepts;
 
-namespace Domain.Management.IdentityResources
+namespace Concepts.Resources
 {
+
+
     /// <summary>
-    /// Represents an intent to disable an identity resource
+    /// Represents the concept of a name for an identity resource
     /// </summary>
-    public class DisableIdentityResource : ICommand
+    public class Name : ConceptAs<string>
     {
         /// <summary>
-        /// Gets or sets the name of the identity resource
+        /// Implicitly convert from <see cref="string"/> to <see cref="Name"/>
         /// </summary>
-        public Name Name { get; set; }
+        /// <param name="name"><see cref="string"/> representation</param>
+        public static implicit operator Name(string name) => new Name { Value = name };
     }
 }

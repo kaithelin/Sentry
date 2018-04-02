@@ -2,16 +2,15 @@
  *  Copyright (c) Dolittle. All rights reserved.
  *  Licensed under the MIT License. See LICENSE in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-using Concepts.IdentityResources;
+using Concepts.Resources;
 using Dolittle.Commands;
 
-namespace Domain.Management.IdentityResources
+namespace Domain.Management.Resources
 {
-
     /// <summary>
-    /// Represents an intent to enable an identity resource
+    /// Represents an intent to disable an identity resource
     /// </summary>
-    public class EnableIdentityResource : ICommand
+    public class DisableIdentityResource : ICommand
     {
         /// <summary>
         /// Gets or sets the name of the identity resource

@@ -2,17 +2,15 @@
  *  Copyright (c) Dolittle. All rights reserved.
  *  Licensed under the MIT License. See LICENSE in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-using Concepts;
-using Concepts.Claims;
-using Concepts.IdentityResources;
+using Concepts.Resources;
 using Dolittle.Commands;
 
-namespace Domain.Management.IdentityResources
+namespace Domain.Management.Resources
 {
     /// <summary>
-    /// Represents the intent to add a claim to an identity resource
+    /// Represents the intent to add an identity resource in the context of the current tenant
     /// </summary>
-    public class AddClaimToIdentityResource : ICommand
+    public class AddIdentityResource : ICommand
     {
         /// <summary>
         /// Gets or sets the name of the identity resource
@@ -20,14 +18,13 @@ namespace Domain.Management.IdentityResources
         public Name Name {  get; set; }
 
         /// <summary>
-        /// Gets or sets the <see cref="Claim"/> that will be added - this is the identifier of the claim
+        /// Gets or sets the displayname of the identity resource
         /// </summary>
-        public Claim Claim { get; set; }
+        public DisplayName DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or sets the <see cref="ClaimValue">value</see> for the <see cref="Claim"/> to add
+        /// Gets or sets the displayname of the identity resource
         /// </summary>
-        public ClaimValue Value { get; set; }
-
+        public Description Description {  get; set; }
     }
 }
