@@ -1,3 +1,7 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Dolittle. All rights reserved.
+ *  Licensed under the MIT License. See LICENSE in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 import { OpenIdConnect } from "aurelia-open-id-connect";
 import { OidcClient, UserManager, WebStorageStateStore } from 'oidc-client';
 import { inject } from 'aurelia-framework';
@@ -58,7 +62,6 @@ export class RequestAccess {
             });
         }
     }
-
 
     login() {
         this._userManager.signinRedirect({
