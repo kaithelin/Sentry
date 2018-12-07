@@ -1,0 +1,7 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <title>cross</title>
+  <g>
+    <rect x="15.17" y="-3.38" width="2" height="39.11" transform="translate(-6.7 16.17) rotate(-45)" fill="#666"/>
+    <rect x="-3.39" y="15.17" width="39.11" height="2" transform="translate(-6.7 16.17) rotate(-45)" fill="#666"/>
+  </g>
+</svg>

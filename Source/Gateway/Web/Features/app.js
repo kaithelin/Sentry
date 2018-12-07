@@ -12,9 +12,10 @@ export class app {
     configureRouter(config, router) {
         config.options.pushState = true;
         config.map([
-            { route: ['', ':tenant/:application', ':tenant/:application/welcome'], name: 'welcome', moduleId: PLATFORM.moduleName('welcome'), layoutView: PLATFORM.moduleName('layout_fullscreen.html') },
+            { route: ['', ':tenant/:application', ':tenant/:application/welcome'], name: 'welcome', moduleId: PLATFORM.moduleName('welcome'), layoutView: PLATFORM.moduleName('layout.html') },
             { route: ':tenant/:application/Accounts/Login', name: 'Login', moduleId: PLATFORM.moduleName('Gateway/Accounts/Login') },
             { route: ':tenant/:application/Accounts/Consent', name: 'Consent', moduleId: PLATFORM.moduleName('Gateway/Accounts/Consent') },
+            { route: ':tenant/:application/login_vendors', name: 'Login vendors', moduleId: PLATFORM.moduleName('login_vendors/login_vendors') },
             {
                 route: ['Registration/RequestAccessOidcCallback', ':tenant/:application/:client/Registration/RequestAccess'],
                 name: 'RequestAccess',
