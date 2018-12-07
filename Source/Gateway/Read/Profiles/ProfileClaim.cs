@@ -4,7 +4,6 @@
  *--------------------------------------------------------------------------------------------*/
 using System.Collections.Generic;
 using Concepts.Claims;
-using Concepts.Resources;
 using Dolittle.ReadModels;
 using Read.Resources;
 
