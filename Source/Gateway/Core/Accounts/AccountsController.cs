@@ -12,7 +12,7 @@ using IdentityServer4.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Read;
+using Read.Tenants;
 
 namespace Core.Accounts
 {
