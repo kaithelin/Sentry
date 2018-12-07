@@ -1,3 +1,7 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Dolittle. All rights reserved.
+ *  Licensed under the MIT License. See LICENSE in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,9 +31,7 @@ namespace Core
             var isGuid = Guid.TryParse(tenantSegment, out tenant); 
             if (!isGuid) throw new InvalidTenantId("TenantId could not be parsed to a GUID");
 
-            return new GatewayHttpRequest(context, tenant, applicationSegment, segments, fromEtag);
-
-            
+            return new GatewayHttpRequest(context, tenant, applicationSegment, segments, fromEtag);            
         }
         public GatewayHttpRequest(HttpContext context, TenantId tenant, ApplicationName application, string[] segments, bool fromEtag)
         {

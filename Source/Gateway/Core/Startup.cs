@@ -1,13 +1,11 @@
 using Autofac;
-using Dolittle.AspNetCore.Bootstrap;
-using Dolittle.Bootstrapping;
+using Dolittle.Booting;
 using Dolittle.DependencyInversion.Autofac;
 using IdentityServer4.Stores;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Read;
 using Read.Resources;
 
@@ -58,7 +56,6 @@ namespace Core
             
             _bootResult = services.AddDolittle(_loggerFactory);
         }
-
 
         public void ConfigureContainer(ContainerBuilder containerBuilder)
         {
