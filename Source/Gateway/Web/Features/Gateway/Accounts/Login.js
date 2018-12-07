@@ -34,6 +34,7 @@ export class Login {
         
         this.queryCoordinator.execute(new ExternalAuthoritiesInScheme(), params.tenant, params.application)
             .then((result) => {
+              console.log(result.items);
                 let authorities = result.items;
 
                 authorities.forEach(authority => {
