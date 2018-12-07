@@ -5,7 +5,7 @@
 using System.Linq;
 using Concepts;
 using Dolittle.Queries;
-using Read;
+using Read.Tenants;
 
 namespace Read.Profiles
 {

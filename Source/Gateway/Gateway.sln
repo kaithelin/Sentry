@@ -19,8 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Specs", "Domain.Spec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Read.Specs", "Read.Specs\Read.Specs.csproj", "{85AF3248-A59D-41EA-BB34-31E04DB22DDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Read.Infrastructure", "Read.Infrastructure\Read.Infrastructure.csproj", "{E979B628-476E-4F49-9CD6-887D7EE780DD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
