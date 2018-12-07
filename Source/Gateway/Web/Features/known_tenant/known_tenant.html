@@ -1,0 +1,12 @@
+<template>
+  <require from="./known_tenant.scss"></require>
+  <require from="./ObjectValuesValueConverter"></require>
+  
+  <div class="container acrylic">
+    <h3>We see that your organization is already here</h3>
+    <div>
+        <button repeat.for="val of tenants | objectValues">${val.name}</button> <!-- placeholder button for tenants -->
+    </div>
+    <a href="#">None of these</a>
+  </div>
+</template>
