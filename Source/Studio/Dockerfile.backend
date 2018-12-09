@@ -1,0 +1,24 @@
+# Build the .NET part
+FROM microsoft/dotnet:2.2-sdk-bionic AS dotnet-build
+WORKDIR /src
+COPY ./Build ./Build
+COPY ./NuGet.Config ./
+COPY ./Source/Studio/bounded-context.json ./bounded-context.json
+COPY ./Source/Studio/Concepts ./Concepts
+COPY ./Source/Studio/Core ./Core
+COPY ./Source/Studio/Domain ./Domain
+COPY ./Source/Studio/Events ./Events
+COPY ./Source/Studio/Policies ./Policies
+COPY ./Source/Studio/Read ./Read
+WORKDIR /src/Core
+RUN mkdir ~/.nuget
+RUN mkdir ~/.nuget/packages
+RUN dotnet restore --ignore-failed-sources
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM microsoft/aspnetcore:2.0.5
+WORKDIR /app
+COPY --from=dotnet-build /src/Core/out ./
+EXPOSE 80
+ENTRYPOINT ["dotnet", "Core.dll"]
