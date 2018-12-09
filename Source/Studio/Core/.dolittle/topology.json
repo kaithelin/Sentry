@@ -1,5 +1,16 @@
 {
-  "modules": [],
-  "features": [
-  ]
+  "modules": [
+    {
+      "module": "f6717130-fe08-438c-84da-767c3091686f",
+      "name": "Tenancy",
+      "features": [
+        {
+          "feature": "764b321e-a73a-4f00-9412-bf2b760674b8",
+          "name": "Registration",
+          "subFeatures": []
+        }
+      ]
+    }
+  ],
+  "features": []
 }

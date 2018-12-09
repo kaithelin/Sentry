@@ -1,4 +1,17 @@
 {
   "artifacts": {
+    "764b321e-a73a-4f00-9412-bf2b760674b8": {
+      "commands": [],
+      "events": [
+        {
+          "artifact": "f935eaa9-e0fd-4813-89a1-311faa8d8446",
+          "generation": 1,
+          "type": "Events.Tenancy.Registration.TenantCreated, Events"
+        }
+      ],
+      "eventSources": [],
+      "readModels": [],
+      "queries": []
+    }
   }
 }
