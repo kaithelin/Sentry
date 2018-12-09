@@ -8,6 +8,7 @@ COPY ./Source/Studio/Concepts ./Concepts
 COPY ./Source/Studio/Core ./Core
 COPY ./Source/Studio/Domain ./Domain
 COPY ./Source/Studio/Events ./Events
+COPY ./Source/Studio/Events.Gateway ./Events.Gateway
 COPY ./Source/Studio/Policies ./Policies
 COPY ./Source/Studio/Read ./Read
 WORKDIR /src/Core
