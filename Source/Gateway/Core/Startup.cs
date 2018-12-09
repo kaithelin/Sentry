@@ -1,6 +1,6 @@
 using Autofac;
 using Dolittle.AspNetCore.Bootstrap;
-using Dolittle.Bootstrapping;
+using Dolittle.Booting;
 using Dolittle.DependencyInversion.Autofac;
 using IdentityServer4.Stores;
 using Microsoft.AspNetCore.Builder;

@@ -7,7 +7,7 @@
         },
         "eventStore": {
             "host": "mongodb://localhost:27017",
-            "database": "event_store",
+            "database": "event_store_database",
             "useSSL": false
         }
     }
