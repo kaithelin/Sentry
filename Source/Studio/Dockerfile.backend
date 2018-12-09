@@ -10,6 +10,7 @@ COPY ./Source/Studio/Domain ./Domain
 COPY ./Source/Studio/Events ./Events
 COPY ./Source/Studio/Events.Gateway ./Events.Gateway
 COPY ./Source/Studio/Policies ./Policies
+COPY ./Source/Studio/Rules ./Rules
 COPY ./Source/Studio/Read ./Read
 WORKDIR /src/Core
 RUN mkdir ~/.nuget
