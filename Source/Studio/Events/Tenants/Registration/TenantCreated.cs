@@ -4,23 +4,34 @@
  *--------------------------------------------------------------------------------------------*/
 using System;
 using Dolittle.Events;
-using Dolittle.Runtime.Tenancy;
+using Dolittle.Tenancy;
 
-namespace Events.Tenancy.Registration
+namespace Events.Tenants.Registration
 {
     /// <summary>
     /// The event that gets applied when a <see cref="Tenant"/> is created
     /// </summary>
     public class TenantCreated : IEvent
     {
-        public TenantCreated(Guid tenantId)
+        /// <summary>
+        /// Initializes a new instance of <see cref="TenantCreated"/>
+        /// </summary>
+        /// <param name="tenant">The unique identifier for tenant</param>
+        /// <param name="name">Name of the tenant</param>
+        public TenantCreated(Guid tenant, string name)
         {
-            TenantId = tenantId;
+            Tenant = tenant;
+            Name = name;
         }
 
         /// <summary>
         /// Gets the global unique identifier for the tenant
         /// </summary>
-        public Guid TenantId { get; }       
+        public Guid Tenant { get; }
+
+        /// <summary>
+        /// Gets the name of the tenant
+        /// </summary>
+        public string Name { get; }
     }
 }

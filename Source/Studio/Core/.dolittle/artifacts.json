@@ -6,7 +6,39 @@
         {
           "artifact": "f935eaa9-e0fd-4813-89a1-311faa8d8446",
           "generation": 1,
-          "type": "Events.Tenancy.Registration.TenantCreated, Events"
+          "type": "Events.Tenants.Registration.TenantCreated, Events"
+        }
+      ],
+      "eventSources": [],
+      "readModels": [],
+      "queries": []
+    },
+    "4572d0e6-302c-4b3b-b247-476f07b1efcb": {
+      "commands": [
+        {
+          "artifact": "ddd115df-b356-4f30-a65a-77e20132b2be",
+          "generation": 1,
+          "type": "Domain.Applications.Tenants.AssociateTenantWithApplication, Domain"
+        }
+      ],
+      "events": [
+        {
+          "artifact": "36aee1e1-e139-4cec-9929-bc29b912b2be",
+          "generation": 1,
+          "type": "Events.Applications.Tenants.TenantAssociatedWithApplication, Events"
+        }
+      ],
+      "eventSources": [],
+      "readModels": [],
+      "queries": []
+    },
+    "3d47dcf1-2209-41f2-a63f-29e7c0b2d702": {
+      "commands": [],
+      "events": [
+        {
+          "artifact": "5f7b0d1d-3e8a-4e93-89ca-551675be3c70",
+          "generation": 1,
+          "type": "Events.Tenants.Registration.TenantCreated, Events"
         }
       ],
       "eventSources": [],

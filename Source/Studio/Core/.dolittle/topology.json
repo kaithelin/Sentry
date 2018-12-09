@@ -10,6 +10,28 @@
           "subFeatures": []
         }
       ]
+    },
+    {
+      "module": "0ea50407-dd94-4b98-b368-71e9335025a4",
+      "name": "Applications",
+      "features": [
+        {
+          "feature": "4572d0e6-302c-4b3b-b247-476f07b1efcb",
+          "name": "Tenants",
+          "subFeatures": []
+        }
+      ]
+    },
+    {
+      "module": "5e6c53cd-75c1-4925-bc60-3ec627a1c8b9",
+      "name": "Tenants",
+      "features": [
+        {
+          "feature": "3d47dcf1-2209-41f2-a63f-29e7c0b2d702",
+          "name": "Registration",
+          "subFeatures": []
+        }
+      ]
     }
   ],
   "features": []
