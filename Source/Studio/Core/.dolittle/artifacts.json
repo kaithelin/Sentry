@@ -44,6 +44,19 @@
       "eventSources": [],
       "readModels": [],
       "queries": []
+    },
+    "6e802abe-1886-40ce-a1ef-125c69934dab": {
+      "commands": [
+        {
+          "artifact": "63db97f0-ed5d-422f-ac24-53c2c24b13d9",
+          "generation": 1,
+          "type": "Domain.Authentication.Configuration.AddOAUTHAuthority, Domain"
+        }
+      ],
+      "events": [],
+      "eventSources": [],
+      "readModels": [],
+      "queries": []
     }
   }
 }
