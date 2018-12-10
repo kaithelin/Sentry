@@ -1,32 +1,34 @@
 {
   "modules": [
     {
-      "module": "5dbc0779-8a99-4aa0-84de-e8d441de798b",
-      "name": "Studio",
+      "module": "f6717130-fe08-438c-84da-767c3091686f",
+      "name": "Tenancy",
       "features": [
         {
-          "feature": "6f9eabcb-9ba8-4a25-a488-4746cc9d5aa9",
-          "name": "UserManagement",
-          "subFeatures": []
-        },
-        {
-          "feature": "a30625c5-2663-4cbb-9680-30dd834223d8",
-          "name": "Resources",
-          "subFeatures": []
-        },
-        {
-          "feature": "fcad7482-671e-40f3-978c-3f53c350b0df",
+          "feature": "764b321e-a73a-4f00-9412-bf2b760674b8",
           "name": "Registration",
           "subFeatures": []
-        },
+        }
+      ]
+    },
+    {
+      "module": "0ea50407-dd94-4b98-b368-71e9335025a4",
+      "name": "Applications",
+      "features": [
         {
-          "feature": "1a9ed6bb-0504-4705-acd6-fefb26297e1e",
-          "name": "Accounts",
+          "feature": "4572d0e6-302c-4b3b-b247-476f07b1efcb",
+          "name": "Tenants",
           "subFeatures": []
-        },
+        }
+      ]
+    },
+    {
+      "module": "5e6c53cd-75c1-4925-bc60-3ec627a1c8b9",
+      "name": "Tenants",
+      "features": [
         {
-          "feature": "4ad32d16-61dc-404d-96ee-bdf85a774f94",
-          "name": "Authority",
+          "feature": "3d47dcf1-2209-41f2-a63f-29e7c0b2d702",
+          "name": "Registration",
           "subFeatures": []
         }
       ]
