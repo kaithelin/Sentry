@@ -7,9 +7,8 @@ using Dolittle.Collections;
 using IdentityServer4;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
-using Read;
+using Read.Tenants;
 
 namespace Core
 {
