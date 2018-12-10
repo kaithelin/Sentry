@@ -21,6 +21,7 @@
 
     <PackageReference Include="Dolittle.AspNetCore" Version="2.0.0-alpha2*" />
     <PackageReference Include="Dolittle.SDK" Version="2.0.0-alpha2*" />
+    <PackageReference Include="Dolittle.Configuration.Files" Version="2.0.0-alpha2*" />
     <!--
     <PackageReference Include="Dolittle.AspNetCore.Bootstrap" Version="2.0.0-alpha2*" />
     <PackageReference Include="Dolittle.AspNetCore.Commands" Version="2.0.0-alpha2*" />
