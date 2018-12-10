@@ -25,14 +25,14 @@ export class sign_up_existing_tenant {
     command.userId = '00000000-0000-0000-0000-000000000000'; //pålogget bruker
     command.userEmail = this.email;
 
-    this._commandCoordinator.handle(command).then(
+    this._commandCoordinator.handle(command, '508c1745-5f2a-4b4c-b7a5-2fbb1484346d', 'Studio').then(
       result => {
-        console.log(result);
+        console.warn(result);
         if (result.success) {
           //Do something, probably redirect to returnUrl¨
           console.log(result);
         } else {
-          console.log(result);
+          console.error(result);
         }
       },
       error => {

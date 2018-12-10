@@ -2,7 +2,7 @@
   <require from="./sign_up_new_tenant.scss"></require>
 
   <div class="big_container_sign_up_new_tenant acrylic">
-      <h3>Join existing organization</h3>
+      <h3>Sign up new organization</h3>
       <div>
         <label>
           Name
@@ -15,6 +15,10 @@
         <label>
           Contact Email
         <input type="text" value.bind="tenantOwnerEmail" placeholder="Your email..">
+        </label>
+        <label>
+          Country
+        <input type="text" value.bind="country" placeholder="Organization location..">
         </label>
         <button>Ask to join</button>
       </div>
