@@ -32,6 +32,17 @@
           "subFeatures": []
         }
       ]
+    },
+    {
+      "module": "8a03f8cc-6a53-4778-9591-b378069dbc6a",
+      "name": "Authentication",
+      "features": [
+        {
+          "feature": "6e802abe-1886-40ce-a1ef-125c69934dab",
+          "name": "Configuration",
+          "subFeatures": []
+        }
+      ]
     }
   ],
   "features": []
