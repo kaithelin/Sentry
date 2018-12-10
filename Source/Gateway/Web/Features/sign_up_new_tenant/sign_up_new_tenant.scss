@@ -1,0 +1,5 @@
+@import '../mixins.scss';
+
+.big_container_sign_up_new_tenant {
+  @include default-big-container;
+}

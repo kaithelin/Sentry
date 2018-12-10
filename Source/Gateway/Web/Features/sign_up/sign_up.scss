@@ -1,11 +1,17 @@
 @import '../mixins.scss';
 
-.big_container {
+.big_container_sign_up {
   @include default-big-container;
   h3 {
     margin-bottom: 5rem;
     max-width: 25rem;
     text-align: center;
+  }
+}
+
+.column {
+  a {
+    color: #ffffff;
   }
 }
 

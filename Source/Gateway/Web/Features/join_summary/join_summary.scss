@@ -1,6 +1,6 @@
 @import '../mixins.scss';
 
-.big_container {
+.big_container_join_summary {
   @include default-big-container;
   justify-content: flex-start;
 }
