@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 using System.Threading;
 using Dolittle.DependencyInversion;
-using Dolittle.Execution;
+using Dolittle.Lifecycle;
 using Infrastructure;
 using Read.Management;
 

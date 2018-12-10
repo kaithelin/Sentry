@@ -12,7 +12,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
 using Autofac;
-using Dolittle.Applications.Serialization.Json;
 using Dolittle.AspNetCore.Bootstrap;
 using Dolittle.Collections;
 using Dolittle.DependencyInversion.Autofac;
@@ -33,6 +32,7 @@ using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
 using Read.Management;
 using Swashbuckle.AspNetCore.Swagger;
+using Dolittle.Booting;
 
 namespace Web
 {
@@ -83,7 +83,7 @@ namespace Web
         readonly IHostingEnvironment _hostingEnvironment;
         IServiceProvider _serviceProvider;
 
-        BootResult _bootResult;
+        BootloaderResult _bootResult;
 
         /// <summary>
         /// 

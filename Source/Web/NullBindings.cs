@@ -1,3 +1,4 @@
+#if(false)
 using System.Globalization;
 using System.Security.Claims;
 using Dolittle.Applications;
@@ -24,6 +25,7 @@ namespace Web
         /// <inheritdoc/>
         public void Provide(IBindingProviderBuilder builder)
         {
+
             builder.Bind<IEventStore>().To<NullEventStore>().Singleton();
             builder.Bind<IEventSourceVersions>().To<NullEventSourceVersions>().Singleton();
             builder.Bind<IEventEnvelopes>().To<EventEnvelopes>();
@@ -82,3 +84,4 @@ namespace Web
         }
     }
 }
+#endif
