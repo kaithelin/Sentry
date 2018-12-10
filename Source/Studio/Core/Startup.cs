@@ -1,6 +1,5 @@
 using Autofac;
-using Dolittle.AspNetCore.Bootstrap;
-using Dolittle.Bootstrapping;
+using Dolittle.Booting;
 using Dolittle.DependencyInversion.Autofac;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,14 +27,13 @@ namespace Core
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
-            
+
             services.AddCors();
 
             services.AddMvc();
 
             _bootResult = services.AddDolittle(_loggerFactory);
         }
-
 
         public void ConfigureContainer(ContainerBuilder containerBuilder)
         {
@@ -57,19 +55,10 @@ namespace Core
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
-            // Todo: this probably is a bit too lose.. 
-            app.UseCors(builder => builder
-                .AllowAnyHeader()
-                .AllowAnyMethod()
-                .AllowAnyOrigin()
-                .AllowCredentials());
-
             app.UseMvc();
-
 
             app.UseDolittle();
             app.RunAsSinglePageApplication();
-        }
-
+       }
     }
 }

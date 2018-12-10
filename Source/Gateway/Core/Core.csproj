@@ -10,11 +10,8 @@
   
   <PropertyGroup>
     <DolittleUseModules>False</DolittleUseModules>
-
     <DolittleNamespaceSegmentsToStrip></DolittleNamespaceSegmentsToStrip>
-    
     <DolittleGenerateProxies>True</DolittleGenerateProxies>
-    
     <DolittleProxiesBasePath>../Web/Features</DolittleProxiesBasePath>
   </PropertyGroup>
   
@@ -42,32 +39,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dolittle.ResourceTypes.Configuration" Version="2.0.0-alpha2*" /> 
-    
-    <PackageReference Include="Dolittle.Tenancy.Configuration" Version="2.0.0-alpha2*" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
-
-    
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />   
     <PackageReference Include="Dolittle.AspNetCore" Version="2.0.0-alpha2*" />
     
-    <PackageReference Include="Dolittle.AspNetCore.Execution" Version="2.0.0-alpha2*" />
     <PackageReference Include="Dolittle.SDK" Version="2.0.0-alpha2*" />
     <PackageReference Include="Dolittle.Build" Version="2.0.0-alpha2*" />   
 
     <PackageReference Include="Dolittle.DependencyInversion.Autofac" Version="2.0.0-alpha2*" />
     
-    <PackageReference Include="Dolittle.ReadModels.MongoDB" Version="2.0.0-alpha2*" />
     <PackageReference Include="Dolittle.Runtime.Events.MongoDB" Version="2.0.0-alpha2*" />   
-    
-    <PackageReference Include="Dolittle.Serialization.Json" Version="2.0.0-alpha2.*" />
-    <PackageReference Include="Dolittle.Concepts.Serialization.Json" Version="2.0.0-alpha2.*" />
+    <PackageReference Include="Dolittle.Runtime.Events.Azure" Version="2.0.0-alpha2*" />      
 
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
     <PackageReference Include="Autofac" Version="4.8.1" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.0" />
     
     <PackageReference Include="IdentityServer4" Version="2.1.0" />
-
   </ItemGroup>
-
 </Project>
