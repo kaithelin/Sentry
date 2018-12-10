@@ -19,7 +19,7 @@ namespace Domain.SignUps
         }
         public void AskedToJoin(SignUpId id, UserId userId, Email userEmail, Email tenantOwnerEmail, DateTime askedToJoin)
         {
-            // todo: rename from AskedToJoinTenant to askToJoinTentant
+            // TODO: rename from AskedToJoinTenant to askToJoinTentant
             Apply(new AskedToJoinTenant( id, userId, userEmail,tenantOwnerEmail, askedToJoin));
         }
         public void SignedUp(SignUpId id, UserId ownerId, Email ownerEmail, TenantName tenantName, HomePage homePage, CountryId countryId, Country country, DateTime signedUp)
