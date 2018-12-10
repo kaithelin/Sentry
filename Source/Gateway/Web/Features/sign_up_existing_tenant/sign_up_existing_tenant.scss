@@ -2,4 +2,29 @@
 
 .big_container {
   @include default-big-container;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.ask_to_join_btn {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+.input-style {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ffffff;
+  border-radius: 0;
+  color: #ffffff;
+}
+
+.button-style {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: none;
+  border-radius: 0;
 }
