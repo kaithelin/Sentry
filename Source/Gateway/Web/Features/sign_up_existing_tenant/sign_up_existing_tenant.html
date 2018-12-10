@@ -3,12 +3,12 @@
 
   <div class="big_container acrylic">
       <h3>Join existing organization</h3>
-      <div>
+      <form role="form" submit.trigger="askToJoin()">
         <label>
           Email to owner
-        <input type="text" placeholder="your email..">
+        <input type="text" value.bind="email" placeholder="your email..">
         </label>
-        <button>Ask to join</button>
-      </div>
+        <button type="submit">Ask to join</button>
+      </form>
     </div>
 </template>
