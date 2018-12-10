@@ -3,10 +3,6 @@
   "boundedContext": "14c6306b-2a04-9274-7ed0-6497382e48e8",
   "boundedContextName": "Gateway",
   "resources": {
-    "readModels": {
-      "production": "MongoDB",
-      "development": "MongoDB"
-    },
     "eventStore": {
       "production": "MongoDB",
       "development": "MongoDB"

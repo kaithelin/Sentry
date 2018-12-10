@@ -4,16 +4,17 @@
  *--------------------------------------------------------------------------------------------*/
 import { Command } from  '@dolittle/commands';
 
-export class AskToJoinTenant extends Command
+export class AddOAUTHAuthority extends Command
 {
     constructor() {
         super();
-        this.type = '297d24f3-570f-4d32-bfb4-3050df0d052b';
+        this.type = '63db97f0-ed5d-422f-ac24-53c2c24b13d9';
 
+        this.application = '00000000-0000-0000-0000-000000000000';
         this.id = '00000000-0000-0000-0000-000000000000';
-        this.userId = '00000000-0000-0000-0000-000000000000';
-        this.userEmail = '';
-        this.tenantId = '00000000-0000-0000-0000-000000000000';
-        this.tenantOwnerEmail = '';
+        this.clientId = '';
+        this.authorityUrl = '';
+        this.type = '00000000-0000-0000-0000-000000000000';
+        this.displayName = '';
     }
 }

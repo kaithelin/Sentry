@@ -29,7 +29,7 @@ namespace Read.SignUps
 
     public class EmailProvider
     {
-        // @todo: app secret
+        // TODO app secret
         private const int Port = 000;
         private const string Host = "smtp.dolittleProvider.com";
         private const bool EnableSsl = true;
