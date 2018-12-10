@@ -1,0 +1,6 @@
+@import '../mixins.scss';
+
+.big_container {
+  @include default-big-container;
+  justify-content: flex-start;
+}

@@ -1,0 +1,26 @@
+@import '../mixins.scss';
+
+.big_container {
+  @include default-big-container;
+  justify-content: space-between;
+}
+
+.tenant_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.tenant_item {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  width: 320px; 
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 15px;
+  padding:5px;
+}
+
+.not_my_tenant {
+  text-decoration: underline;
+}
