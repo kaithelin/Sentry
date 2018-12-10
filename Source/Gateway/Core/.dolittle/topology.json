@@ -30,6 +30,11 @@
       "feature": "dd5773ff-54e6-4284-88ba-d37c9781c0fb",
       "name": "Applications",
       "subFeatures": []
+    },
+    {
+      "feature": "5e4234fb-1b41-413f-967a-5301e08e4316",
+      "name": "SignUps",
+      "subFeatures": []
     }
   ]
 }

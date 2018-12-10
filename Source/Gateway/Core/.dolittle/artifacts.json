@@ -1,5 +1,40 @@
 {
   "artifacts": {
+    "5e4234fb-1b41-413f-967a-5301e08e4316": {
+      "commands": [
+        {
+          "artifact": "ec79d133-cb4a-45f0-9f9b-8accdc655436",
+          "generation": 1,
+          "type": "Domain.SignUps.AskToJoinTenant, Domain"
+        },
+        {
+          "artifact": "f9cfd3b6-abf1-4967-b2df-d96e562eca24",
+          "generation": 1,
+          "type": "Domain.SignUps.SignUpTenant, Domain"
+        }
+      ],
+      "events": [
+        {
+          "artifact": "08928616-a8de-4386-9136-345ba1161732",
+          "generation": 1,
+          "type": "Events.SignUps.AskedToJoinTenant, Events"
+        },
+        {
+          "artifact": "a530802d-7bd1-4f49-954a-591eecc0cd91",
+          "generation": 1,
+          "type": "Events.SignUps.TenantSignedUp, Events"
+        }
+      ],
+      "eventSources": [
+        {
+          "artifact": "0729bc23-61ec-4c33-bf26-5232b64d8d43",
+          "generation": 1,
+          "type": "Domain.SignUps.SignUp, Domain"
+        }
+      ],
+      "readModels": [],
+      "queries": []
+    },
     "8a4b3249-de2c-46b8-8eef-f8658baecdaa": {
       "commands": [],
       "events": [],
