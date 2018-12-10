@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Read;
 using Read.Resources;
 
@@ -58,7 +57,6 @@ namespace Core
             
             _bootResult = services.AddDolittle(_loggerFactory);
         }
-
 
         public void ConfigureContainer(ContainerBuilder containerBuilder)
         {

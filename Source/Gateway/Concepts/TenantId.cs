@@ -18,5 +18,4 @@ namespace Concepts
         /// <param name="id"><see cref="Guid"/> to convert from</param>
         public static implicit operator TenantId(Guid id) => new TenantId { Value = id };
     }
-
 }
