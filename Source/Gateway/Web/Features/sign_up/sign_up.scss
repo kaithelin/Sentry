@@ -2,7 +2,8 @@
 
 .big_container_sign_up {
   @include default-big-container;
-  h3 {
+  justify-content: space-around;
+  h1 {
     margin-bottom: 5rem;
     max-width: 25rem;
     text-align: center;
@@ -12,6 +13,9 @@
 .column {
   a {
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
@@ -30,7 +34,7 @@
 }
 
 .sign-up-svg {
-  width: 200px;
+  width: 280px;
   margin-bottom: 30px;
 }
 
@@ -39,4 +43,74 @@
   height: 190px;
   border-radius: 50%;
   border: 2px solid white;
+}
+
+@media only screen and (max-width: 600px) {
+  .big_container_sign_up {
+    width: 100%;
+    height: 100%;
+
+    h1 {
+      max-width: 40rem;
+      font-size: 2rem;
+    }
+  }
+
+  .column {
+    margin-bottom: 30px;
+  }
+
+  .seperator-line {
+    display: none;
+  }
+
+  .big_subcontainer {
+    flex-direction: column;
+  }
+  .sign-up-svg {
+    width: 100px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .big_container_sign_up {
+    width: 90%;
+    justify-content: center;
+    height: auto;
+    h1 {
+      max-width: 40rem;
+    }
+  }
+
+  .sign-up-svg {
+    width: 200px;
+  }
+
+  .seperator-line {
+    top: 45%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .big_container_sign_up {
+    height: 80%;
+    width: 100%;
+    justify-content: space-around;
+    h1 {
+      max-width: 65rem;
+    }
+  }
+
+  .column {
+    margin-bottom: 60px;
+  }
+
+  .sign-up-svg {
+    width: 280px;
+  }
+
+  .seperator-line {
+    top: 35%;
+    height: 485px;
+  }
 }
