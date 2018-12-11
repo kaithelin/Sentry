@@ -1,0 +1,22 @@
+<template>
+  <require from="./sign_up_new_tenant.scss"></require>
+
+  <div class="big_container acrylic">
+      <h3>Join existing organization</h3>
+      <div>
+        <label>
+          Name
+        <input type="text" value.bind="tenantName" placeholder="Organization name..">
+        </label>
+        <label>
+          Homepage
+        <input type="text" value.bind="tenantUrl" placeholder="Organization homepage..">
+        </label>
+        <label>
+          Contact Email
+        <input type="text" value.bind="tenantOwnerUrl" placeholder="Your email..">
+        </label>
+        <button>Ask to join</button>
+      </div>
+    </div>
+</template>

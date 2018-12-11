@@ -1,4 +1,3 @@
-
 import environment from './environment';
 import { PLATFORM } from 'aurelia-pal';
 //import 'babel-polyfill';
@@ -10,8 +9,7 @@ import oidcConfig from './OpenIDConnectConfiguration';
 Bluebird.config({ warnings: { wForgottenReturn: false } });
 
 export function configure(aurelia) {
-  aurelia.use
-    .standardConfiguration();
+  aurelia.use.standardConfiguration().feature(PLATFORM.moduleName('components/index'));
 
   aurelia.use.plugin(PLATFORM.moduleName('aurelia-open-id-connect'), () => oidcConfig);
 
