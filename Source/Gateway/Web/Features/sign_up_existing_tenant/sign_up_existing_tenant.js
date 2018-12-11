@@ -29,6 +29,8 @@ export class sign_up_existing_tenant {
         console.warn(result);
         if (result.success) {
           console.log(result);
+          let userprofile = this.router.routes.find(x => x.name === 'join_summary');
+          userprofile.almostThere = false;
           this.router.navigateToRoute('join_summary', { tenant: '508c1745-5f2a-4b4c-b7a5-2fbb1484346d', application: 'Studio' });
         } else {
           console.error(result);
