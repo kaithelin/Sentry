@@ -1,10 +1,18 @@
 <template>
   <require from="./join_summary.scss"></require>
-  <div class="big_container_join_summary acrylic">
+  <div class="big_container_join_summary acrylic" if.bind="!almostThere">
     <h3>We've asked the owner</h3>
-    <div>email icon</div>
-    <p>We’ve notified team owner.</p> 
-    <p>The owner will decide wether or not to let you in. </p>
+    <img alt="email icon" src="../../assets/icons/mail.svg"/>
+    <p>We’ve notified team owner.</p>
+    <p>The owner will decide wether or not to let you in.</p>
     <p>When confirmed, we’ll send you an email to activate your account</p>
+  </div>
+  <div class="big_container_join_summary acrylic" if.bind="almostThere">
+      <h2>Almost there</h2>
+      <img alt="email icon" src="../../assets/icons/mail.svg"/>
+      <p>We’ve sent you an email to my@mail.com.</p>
+      <p>Go there to confirm the account, so that we know you are you.</p>
+      <p>You can continue directly to Studio with your account unconfirmed.</p>
+      <p>Unconfirmed accounts will be deleted after 30 days.</p>
   </div>
 </template>
