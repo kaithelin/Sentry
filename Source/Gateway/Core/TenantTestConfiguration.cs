@@ -1,7 +1,10 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Dolittle. All rights reserved.
+ *  Licensed under the MIT License. See LICENSE in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 using System.Collections.Generic;
 using Concepts;
 using Dolittle.Lifecycle;
-using Read;
 using Read.Tenants;
 
 namespace Core

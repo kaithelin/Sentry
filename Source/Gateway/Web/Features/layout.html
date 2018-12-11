@@ -1,10 +1,7 @@
 <template>
-    <require from="./components/app_header/app_header"></require>
-    <require from="./components/app_footer/app_footer"></require>
-
-    <main class="${router.currentInstruction.config.settings.cssClass ? router.currentInstruction.config.settings.cssClass : 'narrow-column'} default_layout">
-        <app_header containerless></app_header>
+    <require from="./layout.scss"></require>
+    <!-- <app-header></app-header> -->
+    <main class="main-content">
         <slot></slot>
     </main>
-    <app_footer></app_footer>
 </template>

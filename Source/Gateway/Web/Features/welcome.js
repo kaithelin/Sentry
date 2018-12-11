@@ -1,4 +1,3 @@
 export class welcome {
-    constructor() {
-    }
+  constructor() {}
 }

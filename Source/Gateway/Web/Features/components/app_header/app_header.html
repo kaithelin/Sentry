@@ -1,11 +1,11 @@
 <template>
-    <require from="./app_header.scss"></require>
-    <header class="app_header">
-        <div class="content-box">
-            <figure class="site-logo">
-                <img src="${tenantLogoUrl}" alt="Logo">
-            </figure>
-            <span if.bind="tenantName" class="tenant-name">${tenantName}</span>
-        </div>
-    </header>
+  <require from="./app_header.scss"></require>
+  <header class="app_header">
+    <a href="/" class="site_logo"> <img src="../../../assets/dolittle_logo_negative.svg" alt="" /> </a>
+    <strong>${dyr}</strong>
+    <aside class="app_options">
+      <a href="#" title="User information"> <img src="../../../assets/icons/User.svg" alt="User icon" /> </a>
+      <a href="#" title="System settings"> <img src="../../../assets/icons/Cog.svg" alt="Settings icon" /> </a>
+    </aside>
+  </header>
 </template>
