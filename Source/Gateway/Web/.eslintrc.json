@@ -28,9 +28,11 @@
             "spread": true,
             "superInFunctions": true,
             "templateStrings": true,
-            "jsx": false
+            "jsx": false,
+            "legacyDecorators": true
         }
     },
+
     "rules": {
     /**
     * Strict mode

@@ -2,25 +2,13 @@
   <require from="./sign_up_new_tenant.scss"></require>
 
   <div class="big_container_sign_up_new_tenant acrylic">
-      <h3>Sign up new organization</h3>
-      <div>
-        <label>
-          Name
-        <input type="text" value.bind="tenantName" placeholder="Organization name..">
-        </label>
-        <label>
-          Homepage
-        <input type="text" value.bind="tenantUrl" placeholder="Organization homepage..">
-        </label>
-        <label>
-          Contact Email
-        <input type="text" value.bind="tenantOwnerEmail" placeholder="Your email..">
-        </label>
-        <label>
-          Country
-        <input type="text" value.bind="country" placeholder="Organization location..">
-        </label>
-        <button>Ask to join</button>
-      </div>
-    </div>
+    <h3>Sign up new organization</h3>
+    <form role="form" submit.trigger="signUp()">
+      <label> Name <input type="text" value.bind="tenantName" placeholder="Organization name.." /> </label>
+      <label> Homepage <input type="text" value.bind="tenantUrl" placeholder="Organization homepage.." /> </label>
+      <label> Contact Email <input type="text" value.bind="tenantOwnerEmail" placeholder="Your email.." /> </label>
+      <label> Country <input type="text" value.bind="country" placeholder="Organization location.." /> </label> 
+      <button type="submit">Ask to join</button>
+    </form>
+  </div>
 </template>
