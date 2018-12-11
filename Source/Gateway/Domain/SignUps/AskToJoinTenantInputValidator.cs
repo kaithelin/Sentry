@@ -13,8 +13,8 @@ namespace Domain.SignUps
     {
         public AskToJoinTenantInputValidator()
         {
-            RuleFor(_ => (Guid)_.Id)
-                .NotEmpty().WithMessage("A Tenant id is required");            
+            //RuleFor(_ => (Guid)_.Id)
+            //    .NotEmpty().WithMessage("A Tenant id is required");            
 
             // RuleFor(_=>_.EmailToOwner).MustBeAValidEmail().WithMessage("Email is invalid");
             // RuleFor(_ => _.Email).Email().WithMessage("")
