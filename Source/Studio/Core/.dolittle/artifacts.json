@@ -57,6 +57,19 @@
       "eventSources": [],
       "readModels": [],
       "queries": []
+    },
+    "0987b658-549d-44bc-8995-be7f508b8672": {
+      "commands": [],
+      "events": [
+        {
+          "artifact": "a530802d-7bd1-4f49-954a-591eecc0cd91",
+          "generation": 1,
+          "type": "Events.Gateway.SignUps.TenantSignedUp, Events.Gateway"
+        }
+      ],
+      "eventSources": [],
+      "readModels": [],
+      "queries": []
     }
   }
 }
