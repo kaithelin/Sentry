@@ -4,6 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 using Dolittle.Concepts;
+using FluentValidation;
 
 namespace Concepts.SignUps
 {
@@ -17,12 +18,23 @@ namespace Concepts.SignUps
         }
     }
 
-    //public static class ValidatorExtensions
-    //{
-    //    public static IRuleBuilderOptions<T, Email> MustBeAValidEmail<T>(this IRuleBuilder<T, Email> ruleBuilder)
-    //    {
-    //        ruleBuilder.NotNull().WithMessage("Invalid email format");
-    //        return ruleBuilder.SetValidator(new EmailValidator());
-    //    }
-    //}
+    public class EmailInputValidator : AbstractValidator<Email>
+    {
+        public EmailInputValidator()
+        {
+            RuleFor(_ => (string) _)
+                .NotEmpty().WithMessage("An email cannot be blank")
+                .EmailAddress().WithMessage("Invalid email address");
+        }
+    }
+
+    public static class ValidatorExtensions
+    {
+        public static IRuleBuilderOptions<T, Email> MustBeAValidEmail<T>(this IRuleBuilder<T, Email> ruleBuilder)
+        {
+            ruleBuilder.NotNull().WithMessage("Email is required");
+            return ruleBuilder.SetValidator(new EmailInputValidator());
+        }
+    }
+
 }

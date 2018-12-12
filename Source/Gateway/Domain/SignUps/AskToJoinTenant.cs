@@ -13,7 +13,6 @@ namespace Domain.SignUps
     {
         public SignUpId Id { get; set; }
         public UserId UserId { get; set; }
-        public Email UserEmail { get; set; }
         public Email TenantOwnerEmail { get; set; }
     }
 }

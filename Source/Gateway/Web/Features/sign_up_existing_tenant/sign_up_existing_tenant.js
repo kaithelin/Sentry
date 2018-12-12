@@ -22,7 +22,7 @@ export class sign_up_existing_tenant {
     let command = new AskToJoinTenant();
     command.id = '00000000-0000-0000-0000-000000000000'; //ny id
     command.userId = '00000000-0000-0000-0000-000000000000'; //pålogget bruker
-    command.userEmail = this.email;
+    command.tenantOwnerEmail = this.email;
 
     this._commandCoordinator.handle(command).then(
       result => {
