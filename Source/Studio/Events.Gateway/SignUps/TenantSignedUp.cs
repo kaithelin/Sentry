@@ -4,10 +4,12 @@
  *--------------------------------------------------------------------------------------------*/
 
 using System;
+using Dolittle.Artifacts;
 using Dolittle.Events;
 
 namespace Events.Gateway.SignUps
 {
+    [Artifact("a530802d-7bd1-4f49-954a-591eecc0cd91")]
     public class TenantSignedUp : IEvent
     {
         public Guid Id { get; }
