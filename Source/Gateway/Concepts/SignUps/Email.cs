@@ -23,14 +23,14 @@ namespace Concepts.SignUps
         public EmailInputValidator()
         {
             RuleFor(_ => (string) _)
-                .NotEmpty().WithMessage("An email cannot be blank")
+                .NotEmpty().WithMessage("Email cannot be blank")
                 .EmailAddress().WithMessage("Invalid email address");
         }
     }
 
-    public static class ValidatorExtensions
+    public static class EmailValidatorExtensions
     {
-        public static IRuleBuilderOptions<T, Email> MustBeAValidEmail<T>(this IRuleBuilder<T, Email> ruleBuilder)
+        public static IRuleBuilderOptions<T, Email> MustBeValidEmail<T>(this IRuleBuilder<T, Email> ruleBuilder)
         {
             ruleBuilder.NotNull().WithMessage("Email is required");
             return ruleBuilder.SetValidator(new EmailInputValidator());

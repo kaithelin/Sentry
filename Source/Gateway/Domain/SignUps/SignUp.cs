@@ -17,10 +17,10 @@ namespace Domain.SignUps
         {
             // todo: tenant id is owned by studio
         }
-        public void AskedToJoin(SignUpId id, UserId userId, Email userEmail, Email tenantOwnerEmail, DateTime askedToJoin)
+        public void AskedToJoin(SignUpId id, UserId userId, Email tenantOwnerEmail, DateTime askedToJoin)
         {
             // TODO: rename from AskedToJoinTenant to askToJoinTentant
-            Apply(new AskedToJoinTenant( id, userId, userEmail,tenantOwnerEmail, askedToJoin));
+            Apply(new AskedToJoinTenant( id, userId, tenantOwnerEmail, askedToJoin));
         }
         public void SignedUp(SignUpId id, UserId ownerId, Email ownerEmail, TenantName tenantName, HomePage homePage, CountryId countryId, Country country, DateTime signedUp)
         {

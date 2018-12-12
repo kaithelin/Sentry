@@ -4,6 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 using Dolittle.Concepts;
+using FluentValidation;
 
 namespace Concepts.SignUps
 {
@@ -16,4 +17,23 @@ namespace Concepts.SignUps
             return new Country { Value = country };
         }
     }
+
+    public class CountryInputValidator : AbstractValidator<Country>
+    {
+        public CountryInputValidator()
+        {
+            RuleFor(_ => (string)_)
+                .NotEmpty().WithMessage("Country name cannot be blank");
+        }
+    }
+
+    public static class CountryValidatorExtensions
+    {
+        public static IRuleBuilderOptions<T, Country> MustBeValidCountry<T>(this IRuleBuilder<T, Country> ruleBuilder)
+        {
+            ruleBuilder.NotNull().WithMessage("Country name is required");
+            return ruleBuilder.SetValidator(new CountryInputValidator());
+        }
+    }
+
 }

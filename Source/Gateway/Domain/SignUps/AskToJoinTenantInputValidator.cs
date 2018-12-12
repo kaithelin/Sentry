@@ -4,6 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 using System;
+using Concepts;
 using Concepts.SignUps;
 using Dolittle.Commands.Validation;
 using FluentValidation;
@@ -18,9 +19,11 @@ namespace Domain.SignUps
                 .NotEmpty().WithMessage("A id is required");
 
             RuleFor(_ => _.TenantOwnerEmail)
-                .MustBeAValidEmail();
+                .MustBeValidEmail();
 
-            RuleFor(_=> (Guid)_.UserId).NotEmpty().WithMessage("A Userid is required");
+            RuleFor(_=>_.UserId).MustBeValidUserId();
+
+            RuleFor(_ => _.Id).MustBeValidSignUpId();
         }
     }
 }

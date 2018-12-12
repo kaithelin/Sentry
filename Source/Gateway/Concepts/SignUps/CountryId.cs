@@ -5,6 +5,7 @@
 
 using System;
 using Dolittle.Concepts;
+using FluentValidation;
 
 namespace Concepts.SignUps
 {
@@ -19,6 +20,23 @@ namespace Concepts.SignUps
         public static implicit operator CountryId(string value)
         {
             return new CountryId { Value = Guid.Parse(value) };
+        }
+    }
+    public class CountryIdInputValidator : AbstractValidator<CountryId>
+    {
+        public CountryIdInputValidator()
+        {
+            RuleFor(_ => (Guid)_)
+                .NotEmpty().WithMessage("CountryId cannot be blank");
+        }
+    }
+
+    public static class CountryIdValidatorExtensions
+    {
+        public static IRuleBuilderOptions<T, CountryId> MustBeValidCountryId<T>(this IRuleBuilder<T, CountryId> ruleBuilder)
+        {
+            ruleBuilder.NotNull().WithMessage("CountryId is required");
+            return ruleBuilder.SetValidator(new CountryIdInputValidator());
         }
     }
 }

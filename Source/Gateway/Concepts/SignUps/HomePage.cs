@@ -4,6 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 using Dolittle.Concepts;
+using FluentValidation;
 
 namespace Concepts.SignUps
 {
@@ -14,6 +15,24 @@ namespace Concepts.SignUps
         public static implicit operator HomePage(string homepage)
         {
             return new HomePage { Value = homepage.ToLower().Trim() };
+        }
+    }
+
+    public class HomePageInputValidator : AbstractValidator<HomePage>
+    {
+        public HomePageInputValidator()
+        {
+            RuleFor(_ => (string)_)
+                .NotEmpty().WithMessage("HomePage cannot be blank");
+        }
+    }
+
+    public static class HomePageValidatorExtensions
+    {
+        public static IRuleBuilderOptions<T, HomePage> MustBeValidHomePage<T>(this IRuleBuilder<T, HomePage> ruleBuilder)
+        {
+            ruleBuilder.NotNull().WithMessage("HomePage is required");
+            return ruleBuilder.SetValidator(new HomePageInputValidator());
         }
     }
 }
