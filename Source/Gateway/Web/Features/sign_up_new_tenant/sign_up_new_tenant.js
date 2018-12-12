@@ -1,24 +1,31 @@
 import { inject } from 'aurelia-framework';
 import { Router } from 'aurelia-router';
 import { SentryCommandCoordinator } from '../SentryCommandCoordinator';
+import { SentryQueryCoordinator } from '../SentryQueryCoordinator';
 import { SignUpTenant } from '../SignUps/SignUpTenant';
 
-@inject(Router, SentryCommandCoordinator)
+@inject(Router, SentryCommandCoordinator, SentryQueryCoordinator)
 export class sign_up_new_tenant {
+  countries = [{ id: 0, name: 'Motherboard' }, { id: 1, name: 'CPU' }, { id: 2, name: 'Memory' }];
+  selectedProductId = null;
   tenantName = '';
   tenantUrl = '';
   tenantOwnerEmail = '';
   country = '';
 
+  findOption = value => this.countries.find(x => x.name === value);
+
   /**
    * Initializes a new instance of {sign_up_existing_tenant}
    * @param router router
    * @param {SentryCommandCoordinator} sentryCommandCoordinator
+   * @param {SentryQueryCoordinator} sentryQueryCoordinator
    */
 
-  constructor(router, sentryCommandCoordinator) {
+  constructor(router, sentryCommandCoordinator, sentryQueryCoordinator) {
     this.router = router;
     this._commandCoordinator = sentryCommandCoordinator;
+    this._queryCoordinator = sentryQueryCoordinator;
   }
 
   signUp() {
@@ -29,7 +36,7 @@ export class sign_up_new_tenant {
     command.ownerUserId = '00000000-0000-0000-0000-000000000000';
     command.ownerEmail = this.tenantOwnerEmail;
     command.countryId = '00000000-0000-0000-0000-000000000000';
-    command.country = this.country;
+    command.country = this.country.name;
 
     this._commandCoordinator.handle(command).then(
       result => {
