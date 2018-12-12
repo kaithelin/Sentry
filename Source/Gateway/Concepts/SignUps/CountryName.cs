@@ -8,32 +8,31 @@ using FluentValidation;
 
 namespace Concepts.SignUps
 {
-    public class Country : ConceptAs<string>
+    public class CountryName : ConceptAs<string>
     {
-        public static readonly Country NotSet = string.Empty;
+        public static readonly CountryName NotSet = string.Empty;
 
-        public static implicit operator Country(string country)
+        public static implicit operator CountryName(string country)
         {
-            return new Country { Value = country };
+            return new CountryName { Value = country };
         }
     }
 
-    public class CountryInputValidator : AbstractValidator<Country>
+    public class CountryNameInputValidator : AbstractValidator<CountryName>
     {
-        public CountryInputValidator()
+        public CountryNameInputValidator()
         {
             RuleFor(_ => (string)_)
                 .NotEmpty().WithMessage("Country name cannot be blank");
         }
     }
 
-    public static class CountryValidatorExtensions
+    public static class CountryNameValidatorExtensions
     {
-        public static IRuleBuilderOptions<T, Country> MustBeValidCountry<T>(this IRuleBuilder<T, Country> ruleBuilder)
+        public static IRuleBuilderOptions<T, CountryName> MustBeValidCountryName<T>(this IRuleBuilder<T, CountryName> ruleBuilder)
         {
             ruleBuilder.NotNull().WithMessage("Country name is required");
-            return ruleBuilder.SetValidator(new CountryInputValidator());
+            return ruleBuilder.SetValidator(new CountryNameInputValidator());
         }
     }
-
 }
