@@ -5,7 +5,7 @@
   <div class="big_container_sign_up_new_tenant acrylic">
     <h1>Sign up new organization</h1>
     <form role="form" submit.trigger="signUp()">
-      <label class="label-style"> Name <input class="input-style" type="text" value="tenantName" placeholder="Organization name.." /> </label>
+      <label class="label-style"> Name <input class="input-style" type="text" value.bind="tenantName" placeholder="Organization name.." /> </label>
       <label class="label-style"> Homepage <input class="input-style" type="text" value.bind="tenantUrl" placeholder="Organization homepage.." /> </label>
       <label class="label-style"> Contact Email <input class="input-style" type="text" value.bind="tenantOwnerEmail" placeholder="Your email.." /> </label>
       <label class="label-style">
