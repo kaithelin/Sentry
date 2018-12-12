@@ -7,13 +7,11 @@ import { SignUpTenant } from '../SignUps/SignUpTenant';
 @inject(Router, SentryCommandCoordinator, SentryQueryCoordinator)
 export class sign_up_new_tenant {
   countries = [{ id: 0, name: 'Motherboard' }, { id: 1, name: 'CPU' }, { id: 2, name: 'Memory' }];
-  selectedProductId = null;
   tenantName = '';
   tenantUrl = '';
   tenantOwnerEmail = '';
   country = '';
-
-  findOption = value => this.countries.find(x => x.name === value);
+  errors = [];
 
   /**
    * Initializes a new instance of {sign_up_existing_tenant}
@@ -27,6 +25,17 @@ export class sign_up_new_tenant {
     this._commandCoordinator = sentryCommandCoordinator;
     this._queryCoordinator = sentryQueryCoordinator;
   }
+
+  findOption = value => this.countries.find(x => x.name === value);
+
+  addHttp = url => {
+    let string = url;
+    if (!~string.indexOf('http' || 'https')) {
+      string = 'http://' + string;
+    }
+    url = string;
+    return url;
+  };
 
   signUp() {
     let command = new SignUpTenant();
@@ -47,6 +56,7 @@ export class sign_up_new_tenant {
           console.log(result);
         } else {
           console.warn(result);
+          this.error = result.allValidationMessages;
         }
       },
       error => {
