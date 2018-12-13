@@ -1,38 +1,33 @@
 {
   "artifacts": {
-    "bfd8510b-24d6-4fb6-a971-d5d00a2ff8b7": {
+    "5e4234fb-1b41-413f-967a-5301e08e4316": {
       "commands": [
         {
-          "artifact": "55e11974-ecea-4f1b-81f5-29c033a13379",
+          "artifact": "ec79d133-cb4a-45f0-9f9b-8accdc655436",
           "generation": 1,
           "type": "Domain.SignUps.AskToJoinTenant, Domain"
         },
         {
-          "artifact": "34efa104-b4fc-484b-9e31-a74ea2d66062",
+          "artifact": "f9cfd3b6-abf1-4967-b2df-d96e562eca24",
           "generation": 1,
           "type": "Domain.SignUps.SignUpTenant, Domain"
         }
       ],
       "events": [
         {
-          "artifact": "e4537391-26ef-4ec7-8777-b175363fac97",
+          "artifact": "08928616-a8de-4386-9136-345ba1161732",
           "generation": 1,
           "type": "Events.SignUps.AskedToJoinTenant, Events"
         },
         {
-          "artifact": "4c43121a-1f6e-4787-8df6-46a9fb39139b",
+          "artifact": "a530802d-7bd1-4f49-954a-591eecc0cd91",
           "generation": 1,
-          "type": "Events.SignUps.TenantCreated, Events"
-        },
-        {
-          "artifact": "ac84d9bc-94c6-48cd-a1d3-56213cd0e634",
-          "generation": 1,
-          "type": "Events.SignUps.TenantSignedUp, Events"
+          "type":  "Events.SignUps.TenantSignedUp, Events"
         }
       ],
       "eventSources": [
         {
-          "artifact": "933ca4aa-6d5c-443f-abf1-906110fd586c",
+          "artifact": "0729bc23-61ec-4c33-bf26-5232b64d8d43",
           "generation": 1,
           "type": "Domain.SignUps.SignUp, Domain"
         }
@@ -46,7 +41,7 @@
       "eventSources": [],
       "readModels": [
         {
-          "artifact": "c1e8ca97-c46a-477c-832d-6c591351eed0",
+          "artifact": "0638c482-236d-4716-a1b7-bd14eabc71c1",
           "generation": 1,
           "type": "Read.Tenants.Tenant, Read"
         }

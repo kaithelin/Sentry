@@ -53,7 +53,7 @@ namespace Core
 
             services.Add(new ServiceDescriptor(typeof(IConsentMessageStore), typeof(InMemoryConsentMessageStore), ServiceLifetime.Transient));
             
-            services.AddSentryAuthentication(_hostingEnvironment);            
+            //services.AddSentryAuthentication(_hostingEnvironment);            
             
             _bootResult = services.AddDolittle(_loggerFactory);
         }
@@ -66,7 +66,7 @@ namespace Core
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             
-            OpenIdConnectConfiguration.ServiceProvider = app.ApplicationServices;
+            //OpenIdConnectConfiguration.ServiceProvider = app.ApplicationServices;
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -82,10 +82,10 @@ namespace Core
                 .AllowAnyOrigin()
                 .AllowCredentials());
             
-            app.UseMiddleware<AuthContextMiddleware>();
-            app.UseMiddleware<OpenIdWellKnownConfigurationMiddleware>();
+            //app.UseMiddleware<AuthContextMiddleware>();
+            //app.UseMiddleware<OpenIdWellKnownConfigurationMiddleware>();
 
-            app.UseIdentityServer();
+            //app.UseIdentityServer();
             app.UseMvc();
 
             app.UseDolittle();

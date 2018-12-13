@@ -23,7 +23,7 @@ namespace Domain.SignUps
             var askedToJoin = DateTime.UtcNow;
 
             var aggregateRoot = _repository.Get(cmd.Id.Value);
-            aggregateRoot.AskedToJoin(cmd.Id, cmd.UserId, cmd.UserEmail, cmd.TenantOwnerEmail, askedToJoin);
+            aggregateRoot.AskedToJoin(cmd.Id, cmd.UserId, cmd.TenantOwnerEmail, askedToJoin);
         }
 
         public void Handle(SignUpTenant cmd)
