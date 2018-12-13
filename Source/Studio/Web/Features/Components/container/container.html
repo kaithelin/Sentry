@@ -1,7 +1,20 @@
 <template>
-    <require from="./container.scss"></require>
-    <div class="acrylic container">
-        <h1>test</h1>
-        <slot></slot>
+  <require from="./container.scss"></require>
+  <div class="acrylic container">
+      
+    <div class="users-top-menu">
+      <span class="users-title"> <h1>users</h1> </span>
+      <span class="users-crud-menu">
+        <p>Invite</p>
+        <p>Edit</p>
+        <p>Delete</p>
+      </span>
     </div>
+
+    <div class="users-sub-menu">
+      <p>All users</p>
+      <p>invitaions</p>
+      <p>Banned</p>
+    </div>
+  </div>
 </template>
