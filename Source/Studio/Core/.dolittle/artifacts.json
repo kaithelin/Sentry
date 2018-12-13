@@ -70,6 +70,19 @@
       "eventSources": [],
       "readModels": [],
       "queries": []
+    },
+    "629032d4-6842-4b33-9e7d-c7b07fcb8ccd": {
+      "commands": [],
+      "events": [
+        {
+          "artifact": "4cb451bd-0067-4d55-874e-209abc139b62",
+          "generation": 1,
+          "type": "Events.Users.Management.UserInvited, Events"
+        }
+      ],
+      "eventSources": [],
+      "readModels": [],
+      "queries": []
     }
   }
 }

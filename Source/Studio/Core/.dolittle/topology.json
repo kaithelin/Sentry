@@ -54,6 +54,17 @@
           "subFeatures": []
         }
       ]
+    },
+    {
+      "module": "19eea3b2-eca8-44f0-9326-0b29dcdebea8",
+      "name": "Users",
+      "features": [
+        {
+          "feature": "629032d4-6842-4b33-9e7d-c7b07fcb8ccd",
+          "name": "Management",
+          "subFeatures": []
+        }
+      ]
     }
   ],
   "features": []
