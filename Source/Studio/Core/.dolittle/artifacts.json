@@ -70,6 +70,36 @@
       "eventSources": [],
       "readModels": [],
       "queries": []
+    },
+    "6683aec6-6108-4af9-81f1-8e6d15e9979e": {
+      "commands": [
+        {
+          "artifact": "27b7cace-1680-4587-9e6f-e4fbd17190dd",
+          "generation": 1,
+          "type": "Domain.Users.Management.InviteUser, Domain"
+        }
+      ],
+      "events": [
+        {
+          "artifact": "5648b52f-a423-4a0b-8e33-53c1a4edcf16",
+          "generation": 1,
+          "type": "Events.Users.Management.UserInvitationCancelled, Events"
+        },
+        {
+          "artifact": "f772da49-4a60-4e56-ac7c-c91ce0b656f3",
+          "generation": 1,
+          "type": "Events.Users.Management.UserInvited, Events"
+        }
+      ],
+      "eventSources": [
+        {
+          "artifact": "17de12b4-a4d5-4547-8e7e-975c426736d6",
+          "generation": 1,
+          "type": "Domain.Users.Management.UserInvitation, Domain"
+        }
+      ],
+      "readModels": [],
+      "queries": []
     }
   }
 }
