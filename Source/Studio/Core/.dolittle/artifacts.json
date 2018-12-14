@@ -1,29 +1,29 @@
 {
   "artifacts": {
-    "764b321e-a73a-4f00-9412-bf2b760674b8": {
-      "commands": [],
-      "events": [
+    "70fc15c1-c9ac-4082-99ef-e86237d37863": {
+      "commands": [
         {
-          "artifact": "f935eaa9-e0fd-4813-89a1-311faa8d8446",
+          "artifact": "1311a525-162e-4c00-89c1-800b5e4146ca",
           "generation": 1,
-          "type": "Events.Tenants.Registration.TenantCreated, Events"
+          "type": "Domain.Authentication.Configuration.AddOAUTHAuthority, Domain"
         }
       ],
+      "events": [],
       "eventSources": [],
       "readModels": [],
       "queries": []
     },
-    "4572d0e6-302c-4b3b-b247-476f07b1efcb": {
+    "b37b8a54-8bfe-465a-afc3-ce7e8a9ffc79": {
       "commands": [
         {
-          "artifact": "ddd115df-b356-4f30-a65a-77e20132b2be",
+          "artifact": "db6077cb-a991-400f-9e8c-3c62f857940d",
           "generation": 1,
           "type": "Domain.Applications.Tenants.AssociateTenantWithApplication, Domain"
         }
       ],
       "events": [
         {
-          "artifact": "36aee1e1-e139-4cec-9929-bc29b912b2be",
+          "artifact": "cd6a1462-fd8a-49b2-834b-4ae3d200fad8",
           "generation": 1,
           "type": "Events.Applications.Tenants.TenantAssociatedWithApplication, Events"
         }
@@ -32,28 +32,28 @@
       "readModels": [],
       "queries": []
     },
-    "3d47dcf1-2209-41f2-a63f-29e7c0b2d702": {
+    "e632f72f-5d93-4829-b13b-b8e898211409": {
       "commands": [],
       "events": [
         {
-          "artifact": "5f7b0d1d-3e8a-4e93-89ca-551675be3c70",
+          "artifact": "c4f996f9-b466-4060-b529-a2e43affaf0d",
           "generation": 1,
-          "type": "Events.Tenants.Registration.TenantCreated, Events"
+          "type": "Events.Users.Management.UserInvited, Events"
         }
       ],
       "eventSources": [],
       "readModels": [],
       "queries": []
     },
-    "6e802abe-1886-40ce-a1ef-125c69934dab": {
-      "commands": [
+    "d8f1a6e7-c7aa-4582-aac1-c86594d52a23": {
+      "commands": [],
+      "events": [
         {
-          "artifact": "63db97f0-ed5d-422f-ac24-53c2c24b13d9",
+          "artifact": "e2d05d0c-a521-4321-89f4-8eb87f2c5db6",
           "generation": 1,
-          "type": "Domain.Authentication.Configuration.AddOAUTHAuthority, Domain"
+          "type": "Events.Tenants.Registration.TenantCreated, Events"
         }
       ],
-      "events": [],
       "eventSources": [],
       "readModels": [],
       "queries": []
