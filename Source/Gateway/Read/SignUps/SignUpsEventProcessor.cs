@@ -6,10 +6,10 @@ using Events.SignUps;
 
 namespace Read.SignUps
 {
-    public class SignedUpEventProcessor : ICanProcessEvents
+    public class SignUpsEventProcessor : ICanProcessEvents
     {
         private readonly EmailProvider _emailProvider;
-        public SignedUpEventProcessor()
+        public SignUpsEventProcessor()
         {
             _emailProvider = new EmailProvider();
         }
