@@ -3,10 +3,11 @@ import { Router } from 'aurelia-router';
 import { SentryCommandCoordinator } from '../SentryCommandCoordinator';
 import { SentryQueryCoordinator } from '../SentryQueryCoordinator';
 import { SignUpTenant } from '../SignUps/SignUpTenant';
+import { AllCountries } from '../SignUps/AllCountries';
 
 @inject(Router, SentryCommandCoordinator, SentryQueryCoordinator)
 export class sign_up_new_tenant {
-  countries = [{ id: 0, name: 'Motherboard' }, { id: 1, name: 'CPU' }, { id: 2, name: 'Memory' }];
+  countries = [];
   tenantName = '';
   tenantUrl = '';
   tenantOwnerEmail = '';
@@ -26,6 +27,10 @@ export class sign_up_new_tenant {
     this._queryCoordinator = sentryQueryCoordinator;
   }
 
+  activate() {
+    this.getAllCountries();
+  }
+
   findOption = value => this.countries.find(x => x.name === value);
 
   addHttp = url => {
@@ -36,6 +41,12 @@ export class sign_up_new_tenant {
     url = string;
     return url;
   };
+
+  getAllCountries() {
+    let query = new AllCountries();
+
+    this._queryCoordinator.execute(query).then(result => (this.countries = [...result.items]));
+  }
 
   signUp() {
     let command = new SignUpTenant();

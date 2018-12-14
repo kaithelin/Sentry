@@ -1,6 +1,5 @@
 <template>
   <require from="./sign_up_new_tenant.scss"></require> 
-  <require from="../known_tenant/ObjectValuesValueConverter"></require>
 
   <div class="big_container_sign_up_new_tenant acrylic">
     <h1>Sign up new organization</h1>
@@ -23,13 +22,13 @@
         <input
           type="text"
           class="input-style"
-          placeholder="Search for vessel..."
+          placeholder="Search for country..."
           value.bind="counrty & throttle"
           list="countries"
           input.delegate="country = findOption($event.target.value)"
           required
         />
-        <datalist id="countries"><option repeat.for="val of countries | objectValues">${val.name}</option></datalist>
+        <datalist id="countries"><option repeat.for="val of countries">${val.name}</option></datalist>
       </label>
 
       <button button class="button-style ask_to_join_btn" type="submit">Sign up</button>
