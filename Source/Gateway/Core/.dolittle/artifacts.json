@@ -146,6 +146,35 @@
         }
       ],
       "queries": []
+    },
+    "3b74f16a-eaed-4375-aaa9-d73b9203f37b": {
+      "commands": [
+        {
+          "artifact": "77d86f78-eb36-4b17-8fae-f866c0d984f7",
+          "generation": 1,
+          "type": "Domain.Users.Managment.AcceptUserInvitation, Domain"
+        },
+        {
+          "artifact": "03ce4d58-e9a3-4768-a533-97271e6a5f9e",
+          "generation": 1,
+          "type": "Domain.Users.Managment.DenyUserInvitation, Domain"
+        }
+      ],
+      "events": [
+        {
+          "artifact": "5aedd3e7-3549-4146-b7ce-d73e152bbddc",
+          "generation": 1,
+          "type": "Events.Users.Managment.UserAcceptedInvitation, Events"
+        },
+        {
+          "artifact": "6ad851bf-4f16-4fd7-ac71-c90111a2cedf",
+          "generation": 1,
+          "type": "Events.Users.Managment.UserDeniedInvitaition, Events"
+        }
+      ],
+      "eventSources": [],
+      "readModels": [],
+      "queries": []
     }
   }
 }

@@ -17,5 +17,9 @@
     <PackageReference Include="IdentityServer4" Version="2.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Users\Management\" />
+  </ItemGroup>
+
 
 </Project>
