@@ -1,11 +1,13 @@
 <template>
   <require from="./container.scss"></require>
+  <require from="../invite_user/invite_user"></require>
   <div class="acrylic container">
-      
+
     <div class="users-top-menu">
       <span class="users-title"> <h1>users</h1> </span>
       <span class="users-crud-menu">
-        <p>Invite</p>
+        <p click.trigger="showInviteDialog()">Invite</p>
+        <invite_user if.bind="display_invite_dialog" class="invite-user" displaybool.two-way="display_invite_dialog"></invite_user>
         <p>Edit</p>
         <p>Delete</p>
       </span>
@@ -17,4 +19,5 @@
       <p>Banned</p>
     </div>
   </div>
+
 </template>
