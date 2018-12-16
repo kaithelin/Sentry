@@ -30,7 +30,7 @@ export class SentryCommandCoordinator
      * @memberof SentryCommandCoordinator
      */
     handle(command, tenantId, applicationName) {
-        CommandCoordinator.apiBaseUrl = `/${tenantId}/${applicationName}`;
+        // CommandCoordinator.apiBaseUrl = `/${tenantId}/${applicationName}`;
         
         return this._commandCoordinator.handle(command)
             .then( commandResult => commandResult)

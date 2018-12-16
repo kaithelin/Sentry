@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 using Concepts;
-using Concepts.SignedUp;
+using Concepts.SignUps;
 using Dolittle.Commands;
 
 namespace Domain.SignUps

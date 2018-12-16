@@ -3,21 +3,22 @@
  *  Licensed under the MIT License. See LICENSE in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 using System;
-using Dolittle.Concepts;
+using Dolittle.Events.Processing;
+using Events.Gateway.SignUps;
 
-namespace Concepts.SignedUp
+namespace Read.SignUps
 {
-    public class CountryId : ConceptAs<Guid>
+    public class SignedUpEventProcessor : ICanProcessEvents
     {
-        public static readonly CountryId Empty = Guid.Empty;
-        public static implicit operator CountryId(Guid value)
+        public SignedUpEventProcessor()
         {
-            return new CountryId { Value = value };
         }
 
-        public static implicit operator CountryId(string value)
+        [EventProcessor("a530802d-7bd1-4f49-954a-591eecc0cd91")]
+        public void Process(TenantSignedUp @event)
         {
-            return new CountryId { Value = Guid.Parse(value) };
+            // Joho
+            Console.WriteLine("Joho");
         }
     }
 }

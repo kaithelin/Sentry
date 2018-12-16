@@ -43,6 +43,17 @@
           "subFeatures": []
         }
       ]
+    },
+    {
+      "module": "13408cfb-cca9-4b74-886b-d66ffafb414f",
+      "name": "Gateway",
+      "features": [
+        {
+          "feature": "0987b658-549d-44bc-8995-be7f508b8672",
+          "name": "SignUps",
+          "subFeatures": []
+        }
+      ]
     }
   ],
   "features": []
