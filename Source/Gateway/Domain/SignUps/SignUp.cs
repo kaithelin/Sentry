@@ -22,7 +22,7 @@ namespace Domain.SignUps
             // TODO: rename from AskedToJoinTenant to askToJoinTentant
             Apply(new AskedToJoinTenant( id, userId, tenantOwnerEmail, askedToJoin));
         }
-        public void SignedUp(SignUpId id, UserId ownerId, Email ownerEmail, TenantName tenantName, HomePage homePage, CountryId countryId, Country country, DateTime signedUp)
+        public void SignedUp(SignUpId id, UserId ownerId, Email ownerEmail, TenantName tenantName, HomePage homePage, CountryId countryId, CountryName country, DateTime signedUp)
         {
             Apply(new TenantSignedUp(id, ownerId, ownerEmail, tenantName, homePage, countryId, country, signedUp));
             // studio Apply(new TenantCreated(id, ownerId, ownerEmail, tenantId, tenantName, homePage, countryId, country, signedUp));

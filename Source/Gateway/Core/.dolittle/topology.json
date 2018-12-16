@@ -35,6 +35,17 @@
       "feature": "5e4234fb-1b41-413f-967a-5301e08e4316",
       "name": "SignUps",
       "subFeatures": []
+    },
+    {
+      "feature": "fe6666f1-085f-415c-a449-8d02bea47ef8",
+      "name": "Users",
+      "subFeatures": [
+        {
+          "feature": "3b74f16a-eaed-4375-aaa9-d73b9203f37b",
+          "name": "Managment",
+          "subFeatures": []
+        }
+      ]
     }
   ]
 }

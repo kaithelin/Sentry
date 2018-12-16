@@ -19,7 +19,7 @@ namespace Domain.SignUps
             RuleFor(_ => _.OwnerUserId).MustBeValidUserId();
             RuleFor(_ => _.OwnerEmail).MustBeValidEmail();
             RuleFor(_ => _.CountryId).MustBeValidCountryId();
-            RuleFor(_ => _.Country).MustBeValidCountry();            
+            RuleFor(_ => _.Country).MustBeValidCountryName();            
         }
     }
 }
