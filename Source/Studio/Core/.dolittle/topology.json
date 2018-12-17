@@ -35,6 +35,15 @@
           "subFeatures": {}
         }
       }
+    },
+    "f5bebc5b-d8e0-4ea6-b1f4-13f525309773": {
+      "name": "Gateway",
+      "features": {
+        "8f76cbe2-8ec8-4b91-b24d-7fab9bd75b34": {
+          "name": "SignUps",
+          "subFeatures": {}
+        }
+      }
     }
   },
   "features": {}

@@ -4,18 +4,38 @@
  *--------------------------------------------------------------------------------------------*/
 using System;
 using Dolittle.Concepts;
+using FluentValidation;
 
 namespace Concepts
 {
-    /// <summary>
-    /// Represents the concept that identifies a user
-    /// </summary>
     public class UserId : ConceptAs<Guid>
     {
-        /// <summary>
-        /// Implicitly convert from <see cref="Guid"/> to <see cref="UserId"/>
-        /// </summary>
-        /// <param name="userId"><see cref="Guid"/> to convert from</param>
-        public static implicit operator UserId(Guid userId) => new UserId { Value = userId };
+        public static readonly UserId Empty = Guid.Empty;
+        public static implicit operator UserId(Guid value)
+        {
+            return new UserId { Value = value };
+        }
+
+        public static implicit operator UserId(string value)
+        {
+            return new UserId { Value = Guid.Parse(value) };
+        }
+    }
+    public class UserIdInputValidator : AbstractValidator<UserId>
+    {
+        public UserIdInputValidator()
+        {
+            RuleFor(_ => (Guid)_)
+                .NotEmpty().WithMessage("UserId cannot be blank");
+        }
+    }
+
+    public static class UserIdValidatorExtensions
+    {
+        public static IRuleBuilderOptions<T, UserId> MustBeValidUserId<T>(this IRuleBuilder<T, UserId> ruleBuilder)
+        {
+            ruleBuilder.NotNull().WithMessage("UserId is required");
+            return ruleBuilder.SetValidator(new UserIdInputValidator());
+        }
     }
 }

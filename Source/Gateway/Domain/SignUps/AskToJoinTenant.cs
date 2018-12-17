@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 using Concepts;
-using Concepts.SignedUp;
+using Concepts.SignUps;
 using Dolittle.Commands;
 
 namespace Domain.SignUps
@@ -13,7 +13,6 @@ namespace Domain.SignUps
     {
         public SignUpId Id { get; set; }
         public UserId UserId { get; set; }
-        public Email UserEmail { get; set; }
         public Email TenantOwnerEmail { get; set; }
     }
 }

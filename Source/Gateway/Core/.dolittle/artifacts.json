@@ -30,8 +30,18 @@
         "type": "Domain.SignUps.SignUp, Domain"
       }
     },
-    "readModels": {},
-    "queries": {}
+    "readModels": {
+      "bf641221-9f35-4085-82bb-db15f4688ea4": {
+        "generation": 1,
+        "type": "Read.SignUps.Country, Read"
+      }
+    },
+    "queries": {
+      "c1a1b48b-6157-43a3-9e7c-9c9dd6d53995": {
+        "generation": 1,
+        "type": "Read.SignUps.AllCountries, Read"
+      }
+    }
   },
   "8a4b3249-de2c-46b8-8eef-f8658baecdaa": {
     "commands": {},
@@ -119,6 +129,43 @@
       "1504fee8-119a-4a52-a033-68031128dc3b": {
         "generation": 1,
         "type": "Read.Applications.Application, Read"
+      }
+    },
+    "queries": {}
+  },
+  "3b74f16a-eaed-4375-aaa9-d73b9203f37b": {
+    "commands": {
+      "664b907d-d774-4a98-978b-fbaece5d16b6": {
+        "generation": 1,
+        "type": "Domain.Users.Managment.AcceptUserInvitation, Domain"
+      },
+      "ed02c805-e2a9-4a89-97b5-bd07e7c4ce48": {
+        "generation": 1,
+        "type": "Domain.Users.Managment.DenyUserInvitation, Domain"
+      }
+    },
+    "events": {
+      "dc265a93-5c5a-4d56-80e5-eb6f685e8e63": {
+        "generation": 1,
+        "type": "Events.Users.Managment.UserAcceptedInvitation, Events"
+      },
+      "a01b8607-b3d1-4ae8-a2d2-91af2b909154": {
+        "generation": 1,
+        "type": "Events.Users.Managment.UserDeniedInvitaition, Events"
+      }
+    },
+    "eventSources": {},
+    "readModels": {},
+    "queries": {}
+  },
+  "0591f7da-d6ad-4a2b-8c12-e4cbda99fee3": {
+    "commands": {},
+    "events": {},
+    "eventSources": {},
+    "readModels": {
+      "142c3f6c-1322-4973-89c4-571732f01ca8": {
+        "generation": 1,
+        "type": "Read.Users.Management.UserInvitaition, Read"
       }
     },
     "queries": {}

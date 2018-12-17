@@ -36,6 +36,19 @@
     "bfd8510b-24d6-4fb6-a971-d5d00a2ff8b7": {
       "name": "SignUps",
       "subFeatures": {}
+    },
+    "fe6666f1-085f-415c-a449-8d02bea47ef8": {
+      "name": "Users",
+      "subFeatures": {
+        "3b74f16a-eaed-4375-aaa9-d73b9203f37b": {
+          "name": "Managment",
+          "subFeatures": {}
+        },
+        "0591f7da-d6ad-4a2b-8c12-e4cbda99fee3": {
+          "name": "Management",
+          "subFeatures": {}
+        }
+      }
     }
   }
 }

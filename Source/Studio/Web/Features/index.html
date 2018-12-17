@@ -1,28 +1,25 @@
 <template>
-    <require from="./index.scss"></require>
-    <div class="index">
-        <section>
-            <side-bar expanded="true" hide_trigger.one-time="true" is_subnavigation="true">
-                <header>
-                    <h1>Sentry</h1>
-                </header>
-                <menu-item navigate-to="#" text="Users">
-                    <menu-item navigate-to="#" text="Management"></menu-item>
+  <require from="./index.scss"></require>
+  <div class="index">
+    <section>
+      <side-bar expanded="true" hide_trigger.one-time="true" is_subnavigation="true">
+        <header>
+            <h1>Sentry</h1>
+        </header>
+        <a href="test" >Users
+        </a>
+        <menu-item navigate-to="#" text="Management"></menu-item>
+        <menu-item navigate-to="#" text="Authentication"></menu-item>
+        <menu-item navigate-to="#" text="Tenants"> </menu-item>
 
-                </menu-item>
-                <menu-item navigate-to="#" text="Authentication"></menu-item>
-                <menu-item navigate-to="#" text="Tenants">
-                    
-                </menu-item>
+        <footer></footer>
+      </side-bar>
+    </section>
+    <section class="page-content improvements-page">
+      <router-view containerless></router-view>
 
-                <footer>    
-                </footer>
-            </side-bar>
-        </section>
-        <section class="page-content improvements-page">
-            <router-view containerless></router-view>
-
-            <pivot></pivot>
-        </section>
-    </div>
+      <pivot></pivot>
+    </section>
+  </div>
 </template>
+

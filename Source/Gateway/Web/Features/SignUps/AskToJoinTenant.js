@@ -12,7 +12,6 @@ export class AskToJoinTenant extends Command
 
         this.id = '00000000-0000-0000-0000-000000000000';
         this.userId = '00000000-0000-0000-0000-000000000000';
-        this.userEmail = '';
         this.tenantOwnerEmail = '';
     }
 }

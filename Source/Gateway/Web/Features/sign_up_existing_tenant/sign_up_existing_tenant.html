@@ -1,14 +1,15 @@
 <template>
   <require from="./sign_up_existing_tenant.scss"></require>
 
-  <div class="big_container acrylic">
-      <h3>Join existing organization</h3>
-      <div>
+  <div class="big_container_sign_up_existing_tenant acrylic">
+      <h1>Join existing organization</h1>
+      <form role="form" submit.trigger="askToJoin()">
         <label>
           Email to owner
-        <input type="text" placeholder="your email..">
+        <input class="input-style" type="email" required value.bind="email" placeholder="your email..">
         </label>
-        <button>Ask to join</button>
-      </div>
+        <button class="button-style ask_to_join_btn" type="submit">Ask to join</button>
+      </form>
+
     </div>
 </template>
