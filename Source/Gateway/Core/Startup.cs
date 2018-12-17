@@ -64,8 +64,7 @@ namespace Core
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-        {
-            
+        {           
             //OpenIdConnectConfiguration.ServiceProvider = app.ApplicationServices;
             if (env.IsDevelopment())
             {

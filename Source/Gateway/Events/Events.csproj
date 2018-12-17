@@ -7,11 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dolittle.SDK" Version="2.0.0-alpha2*" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Users\Managment\" />
+    <PackageReference Include="Dolittle.SDK" Version="2.*" />
   </ItemGroup>
 
 </Project>
