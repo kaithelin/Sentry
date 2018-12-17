@@ -3,6 +3,7 @@ import { Router } from 'aurelia-router';
 import { SentryCommandCoordinator } from '../SentryCommandCoordinator';
 import { SentryQueryCoordinator } from '../SentryQueryCoordinator';
 import { SignUpTenant } from '../SignUps/SignUpTenant';
+import { new_guid } from '../Utilities/guid/Guid';
 
 @inject(Router, SentryCommandCoordinator, SentryQueryCoordinator)
 export class sign_up_new_tenant {
@@ -39,12 +40,12 @@ export class sign_up_new_tenant {
 
   signUp() {
     let command = new SignUpTenant();
-    command.id = '00000000-0000-0000-0000-000000000000'; //ny id
+    command.id = new_guid(); //'00000000-0000-0000-0000-000000000000'; //ny id
     command.tenantName = this.tenantName;
     command.homePage = this.tenantUrl;
-    command.ownerUserId = '00000000-0000-0000-0000-000000000000';
+    command.ownerUserId = new_guid(); //'00000000-0000-0000-0000-000000000000';
     command.ownerEmail = this.tenantOwnerEmail;
-    command.countryId = '00000000-0000-0000-0000-000000000000';
+    command.countryId = new_guid(); //'00000000-0000-0000-0000-000000000000';
     command.country = this.country.name;
 
     this._commandCoordinator.handle(command).then(
