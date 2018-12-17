@@ -1,0 +1,103 @@
+{
+  "65f3688d-ebb6-477a-84ca-35903ed9e5c6": {
+    "commands": {
+      "345251ec-bf00-4ab1-bae1-ea23a695d437": {
+        "generation": 1,
+        "type": "Domain.Users.Management.InviteUser, Domain"
+      }
+    },
+    "events": {
+      "7b9d2f0a-ff75-4ff9-b597-e3c8faafe4a8": {
+        "generation": 1,
+        "type": "Events.Users.Management.UserInvitationCancelled, Events"
+      },
+      "23ddd891-e306-4193-aad0-fdf4efafcad1": {
+        "generation": 1,
+        "type": "Events.Users.Management.UserInvited, Events"
+      }
+    },
+    "eventSources": {
+      "03f49cd4-9d52-424a-9eeb-8889b798656b": {
+        "generation": 1,
+        "type": "Domain.Users.Management.UserInvitation, Domain"
+      }
+    },
+    "readModels": {
+      "554306b5-0dab-4a04-9ef0-5addaacd85e2": {
+        "generation": 1,
+        "type": "Read.Users.Management.UserInvitation, Read"
+      }
+    },
+    "queries": {
+      "984a1a4c-cb04-4fb5-9259-953a2fbd8f51": {
+        "generation": 1,
+        "type": "Read.Users.Management.AllUserInvitations, Read"
+      }
+    }
+  },
+  "2a757936-aeb6-4019-bf2f-d5bcfebe1cc0": {
+    "commands": {
+      "3ac6a392-e63a-466e-b7b5-013eabb3f147": {
+        "generation": 1,
+        "type": "Domain.Authentication.Configuration.AddOAUTHAuthority, Domain"
+      }
+    },
+    "events": {},
+    "eventSources": {},
+    "readModels": {},
+    "queries": {}
+  },
+  "4d424b0b-b821-4252-a4fb-db4f73e39b43": {
+    "commands": {
+      "32b12126-1997-4838-a053-cc4dc5a5a348": {
+        "generation": 1,
+        "type": "Domain.Applications.Tenants.AssociateTenantWithApplication, Domain"
+      }
+    },
+    "events": {
+      "64abeca1-a017-4387-8647-c84df95698a0": {
+        "generation": 1,
+        "type": "Events.Applications.Tenants.TenantAssociatedWithApplication, Events"
+      }
+    },
+    "eventSources": {},
+    "readModels": {},
+    "queries": {}
+  },
+  "2a97dc2e-ae45-4859-9797-634a9157cb3d": {
+    "commands": {},
+    "events": {
+      "d47e6c02-441e-46f2-809e-fc10934e40f2": {
+        "generation": 1,
+        "type": "Events.Tenants.Registration.TenantCreated, Events"
+      }
+    },
+    "eventSources": {},
+    "readModels": {},
+    "queries": {}
+  },
+  "8c7c7e7e-6c2e-43ff-822d-7185a454eb01": {
+    "commands": {},
+    "events": {
+      "a530802d-7bd1-4f49-954a-591eecc0cd91": {
+        "generation": 1,
+        "type": "Events.Gateway.SignUps.TenantSignedUp, Events.Gateway"
+      }
+    },
+    "eventSources": {},
+    "readModels": {},
+    "queries": {}
+  },
+  "8ba93f4f-a721-4ed6-9f5d-8442070e7c4f": {
+    "commands": {},
+    "events": {},
+    "eventSources": {},
+    "readModels": {
+      "e3d1fb74-3250-4a7a-9cdf-97ed713d9781": {
+        "generation": 1,
+        "type": "Read.SignUps.SignUp, Read"
+      }
+    },
+    "queries": {}
+  }
+}

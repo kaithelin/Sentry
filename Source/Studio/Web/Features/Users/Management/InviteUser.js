@@ -8,7 +8,7 @@ export class InviteUser extends Command
 {
     constructor() {
         super();
-        this.type = '27b7cace-1680-4587-9e6f-e4fbd17190dd';
+        this.type = '345251ec-bf00-4ab1-bae1-ea23a695d437';
 
     }
 }

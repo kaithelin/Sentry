@@ -4,20 +4,21 @@
  *--------------------------------------------------------------------------------------------*/
 import { ReadModel } from  '@dolittle/readmodels';
 
-export class UserInvitation extends ReadModel
+export class SignUp extends ReadModel
 {
     constructor() {
         super();
         this.artifact = {
-           id: '554306b5-0dab-4a04-9ef0-5addaacd85e2',
+           id: 'e3d1fb74-3250-4a7a-9cdf-97ed713d9781',
            generation: '1'
         };
         this.id = '00000000-0000-0000-0000-000000000000';
-        this.tenantId = '00000000-0000-0000-0000-000000000000';
-        this.applicationId = '00000000-0000-0000-0000-000000000000';
-        this.email = '';
-        this.invited = new Date();
-        this.validTo = new Date();
-        this.status = {};
+        this.ownerId = '00000000-0000-0000-0000-000000000000';
+        this.ownerEmail = '';
+        this.tenantName = '';
+        this.homePage = '';
+        this.countryId = '00000000-0000-0000-0000-000000000000';
+        this.country = '';
+        this.signedUp = new Date();
     }
 }

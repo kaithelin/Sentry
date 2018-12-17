@@ -1,0 +1,54 @@
+{
+  "modules": {},
+  "features": {
+    "817af105-7b48-46ec-98fc-3897e0c46f97": {
+      "name": "Users",
+      "subFeatures": {
+        "65f3688d-ebb6-477a-84ca-35903ed9e5c6": {
+          "name": "Management",
+          "subFeatures": {}
+        }
+      }
+    },
+    "d4bb2b9f-53b1-4b6a-bc9d-28d2b045b44c": {
+      "name": "Authentication",
+      "subFeatures": {
+        "2a757936-aeb6-4019-bf2f-d5bcfebe1cc0": {
+          "name": "Configuration",
+          "subFeatures": {}
+        }
+      }
+    },
+    "652cc5fb-607d-420f-8e6f-2a696b0c57fb": {
+      "name": "Applications",
+      "subFeatures": {
+        "4d424b0b-b821-4252-a4fb-db4f73e39b43": {
+          "name": "Tenants",
+          "subFeatures": {}
+        }
+      }
+    },
+    "2d155442-70df-458e-91ff-da6b8909eb75": {
+      "name": "Tenants",
+      "subFeatures": {
+        "2a97dc2e-ae45-4859-9797-634a9157cb3d": {
+          "name": "Registration",
+          "subFeatures": {}
+        }
+      }
+    },
+    "d1ac8cfc-bf23-4623-b681-98deb3e4ae66": {
+      "name": "Gateway",
+      "subFeatures": {
+        "8c7c7e7e-6c2e-43ff-822d-7185a454eb01": {
+          "name": "SignUps",
+          "subFeatures": {}
+        }
+      }
+    },
+    "8ba93f4f-a721-4ed6-9f5d-8442070e7c4f": {
+      "name": "SignUps",
+      "subFeatures": {}
+    }
+  }
+}

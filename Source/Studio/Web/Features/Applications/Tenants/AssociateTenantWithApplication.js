@@ -8,7 +8,7 @@ export class AssociateTenantWithApplication extends Command
 {
     constructor() {
         super();
-        this.type = 'ddd115df-b356-4f30-a65a-77e20132b2be';
+        this.type = '32b12126-1997-4838-a053-cc4dc5a5a348';
 
         this.tenant = '00000000-0000-0000-0000-000000000000';
         this.application = '00000000-0000-0000-0000-000000000000';
