@@ -8,7 +8,7 @@ export class AddOAUTHAuthority extends Command
 {
     constructor() {
         super();
-        this.type = '1311a525-162e-4c00-89c1-800b5e4146ca';
+        this.type = '973baa76-d99d-47e7-941c-38c86876ee36';
 
         this.application = '00000000-0000-0000-0000-000000000000';
         this.id = '00000000-0000-0000-0000-000000000000';

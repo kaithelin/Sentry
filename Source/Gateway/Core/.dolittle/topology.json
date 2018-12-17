@@ -1,50 +1,41 @@
 {
-  "modules": [],
-  "features": [
-    {
-      "feature": "8a4b3249-de2c-46b8-8eef-f8658baecdaa",
+  "modules": {},
+  "features": {
+    "8a4b3249-de2c-46b8-8eef-f8658baecdaa": {
       "name": "Tenants",
-      "subFeatures": []
+      "subFeatures": {}
     },
-    {
-      "feature": "78ef6c71-419f-46f7-9388-304c2de74ef1",
+    "78ef6c71-419f-46f7-9388-304c2de74ef1": {
       "name": "Resources",
-      "subFeatures": []
+      "subFeatures": {}
     },
-    {
-      "feature": "bfcbbee3-1f69-48c5-a6c2-62214ce6949e",
+    "bfcbbee3-1f69-48c5-a6c2-62214ce6949e": {
       "name": "Profiles",
-      "subFeatures": []
+      "subFeatures": {}
     },
-    {
-      "feature": "efd24b1c-096a-406f-bc0a-088cf9763a8c",
+    "efd24b1c-096a-406f-bc0a-088cf9763a8c": {
       "name": "Clients",
-      "subFeatures": []
+      "subFeatures": {}
     },
-    {
-      "feature": "4aba95cf-c088-4048-bd45-b56636fb2216",
+    "4aba95cf-c088-4048-bd45-b56636fb2216": {
       "name": "Authorities",
-      "subFeatures": []
+      "subFeatures": {}
     },
-    {
-      "feature": "dd5773ff-54e6-4284-88ba-d37c9781c0fb",
+    "dd5773ff-54e6-4284-88ba-d37c9781c0fb": {
       "name": "Applications",
-      "subFeatures": []
+      "subFeatures": {}
     },
-    {
-      "feature": "e547e2b2-bc05-4283-8a46-681da2812712",
+    "e547e2b2-bc05-4283-8a46-681da2812712": {
       "name": "Logins",
-      "subFeatures": []
+      "subFeatures": {}
     },
-    {
-      "feature": "a4aef730-639a-49d4-815a-407b08f8dc5f",
+    "a4aef730-639a-49d4-815a-407b08f8dc5f": {
       "name": "SignedUp",
-      "subFeatures": []
+      "subFeatures": {}
     },
-    {
-      "feature": "bfd8510b-24d6-4fb6-a971-d5d00a2ff8b7",
+    "bfd8510b-24d6-4fb6-a971-d5d00a2ff8b7": {
       "name": "SignUps",
-      "subFeatures": []
+      "subFeatures": {}
     }
-  ]
+  }
 }
