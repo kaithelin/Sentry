@@ -22,7 +22,7 @@
         {
           "artifact": "a530802d-7bd1-4f49-954a-591eecc0cd91",
           "generation": 1,
-          "type":  "Events.SignUps.TenantSignedUp, Events"
+          "type": "Events.SignUps.TenantSignedUp, Events"
         }
       ],
       "eventSources": [
@@ -32,8 +32,20 @@
           "type": "Domain.SignUps.SignUp, Domain"
         }
       ],
-      "readModels": [],
-      "queries": []
+      "readModels": [
+        {
+          "artifact": "d0033b54-47c2-49e6-9840-c3c559970f44",
+          "generation": 1,
+          "type": "Read.SignUps.Country, Read"
+        }
+      ],
+      "queries": [
+        {
+          "artifact": "ffe7a3ec-8bed-4b3a-be69-f59b4cf59c67",
+          "generation": 1,
+          "type": "Read.SignUps.AllCountries, Read"
+        }
+      ]
     },
     "8a4b3249-de2c-46b8-8eef-f8658baecdaa": {
       "commands": [],

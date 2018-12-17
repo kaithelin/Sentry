@@ -17,6 +17,6 @@ namespace Domain.SignUps
         public UserId OwnerUserId { get; set; }
         public Email OwnerEmail { get; set; }
         public CountryId CountryId { get; set; }
-        public Country Country { get; set; }
+        public CountryName Country { get; set; }
     }
 }
