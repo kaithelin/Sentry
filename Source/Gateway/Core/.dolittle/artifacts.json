@@ -43,6 +43,10 @@
       "a530802d-7bd1-4f49-954a-591eecc0cd91": {
         "generation": 1,
         "type": "Events.SignUps.TenantSignedUp, Events"
+      },
+      "c1585904-8b7c-44bf-9ca8-a3e41868fc2c": {
+        "generation": 1,
+        "type": "Events.SignUps.TenantCreated, Events"
       }
     },
     "eventSources": {

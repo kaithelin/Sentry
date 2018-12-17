@@ -3,7 +3,6 @@
  *  Licensed under the MIT License. See LICENSE in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 using System;
-using Concepts.Users.Management;
 using Dolittle.Events.Processing;
 using Dolittle.ReadModels;
 using Events.Gateway.SignUps;
@@ -20,13 +19,21 @@ namespace Read.SignUps
             _repository = repository;
         }
 
-        [EventProcessor("ecfa4924-ac21-47be-a13e-de38e1a44ac7")]
+        [EventProcessor("69bae5c5-73af-4605-aabf-9a413c7a8241")]
         public void Process(TenantSignedUp @event)
         {
-            //var signUp = _repository.GetById(@event.Id);
-            //if (signUp != null)
+            try
+            {
+                //var signUp = _repository.GetById(@event.Id);
+                //if (signUp != null)
 
-            _repository.Insert(new SignUp { Id = @event.Id,  OwnerEmail = @event.OwnerEmail, HomePage = @event.HomePage, SignedUp = @event.SignedUp });
+                _repository.Insert(new SignUp { Id = @event.Id, OwnerEmail = @event.OwnerEmail, HomePage = @event.HomePage, SignedUp = @event.SignedUp });
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 

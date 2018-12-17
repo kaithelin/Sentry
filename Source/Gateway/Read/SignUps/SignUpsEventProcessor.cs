@@ -20,7 +20,7 @@ namespace Read.SignUps
             _emailProvider.SendEmail(@event.TenantOwnerEmail, "Asked to join tenant", "Asked to join tenant");
         }
 
-        [EventProcessor("a530802d-7bd1-4f49-954a-591eecc0cd91")]
+        [EventProcessor("b95361a4-f154-4c03-8f53-c8f86d89a16b")]
         public void Process(TenantSignedUp @event)
         {
             _emailProvider.SendEmail(@event.OwnerEmail, "Verify account", "Verify");
