@@ -98,8 +98,20 @@
           "type": "Domain.Users.Management.UserInvitation, Domain"
         }
       ],
-      "readModels": [],
-      "queries": []
+      "readModels": [
+        {
+          "artifact": "764c1b07-d881-4c6d-b1d6-cdd73dec5796",
+          "generation": 1,
+          "type": "Read.Users.Management.UserInvitation, Read"
+        }
+      ],
+      "queries": [
+        {
+          "artifact": "c6e79615-0578-42d2-a35b-d6aaffa363fc",
+          "generation": 1,
+          "type": "Read.Users.Management.AllUserInvitations, Read"
+        }
+      ]
     }
   }
 }

@@ -8,7 +8,7 @@ export class DenyUserInvitation extends Command
 {
     constructor() {
         super();
-        this.type = '03ce4d58-e9a3-4768-a533-97271e6a5f9e';
+        this.type = 'b2c30b36-f075-4126-8230-94f47fa85cfb';
 
     }
 }

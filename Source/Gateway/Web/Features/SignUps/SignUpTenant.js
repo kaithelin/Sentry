@@ -8,7 +8,7 @@ export class SignUpTenant extends Command
 {
     constructor() {
         super();
-        this.type = 'f9cfd3b6-abf1-4967-b2df-d96e562eca24';
+        this.type = 'a5bc923e-8feb-48d1-8208-4bc34c3496f5';
 
         this.id = '00000000-0000-0000-0000-000000000000';
         this.tenantName = '';
